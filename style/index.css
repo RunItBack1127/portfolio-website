@@ -247,6 +247,14 @@ body.dark-mode #keyboard-container svg g g path:not(.lit-key) {
     fill: transparent;
 }
 
+body.dark-mode #keyboard-container svg g g rect {
+    stroke: #fff;
+}
+
+body.dark-mode #keyboard-container svg g g g line {
+    stroke: #fff;
+}
+
 .lit-key {
     fill: #FF0000;
 }
