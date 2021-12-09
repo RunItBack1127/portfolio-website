@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Radian", sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    transition: background 200ms ease-in-out,
+        color 200ms ease-in-out;
+    background-color: #fff;
+    color: #000;
+}
+
+body.dark-mode {
+    background-color: #070707;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a, img, svg {
+    display: block;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+body.dark-mode a {
+    color: #fff;
+}
+
+img {
+    object-fit: cover;
+}
+
+button {
+    border: 1px solid #000;
+}
+
+body.dark-mode button {
+    border: 1px solid #fff;
+}
+
+.container--fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container--whole {
+    width: 100%;
+    height: 100vh;
+}
+
+#site-navigation-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+}
+
+#navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1300px;
+    height: 100%;
+}
+
+#socials-container {
+    width: 125px;
+}
+
+#socials-container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#socials-container ul:hover li a svg:not(:hover) {
+    opacity: 0.25;
+}
+
+#socials-container ul li a svg {
+    width: 25px;
+    height: 25px;
+    transition: opacity 200ms ease-in-out;
+}
+
+#navigation-links {
+    width: 50%;
+}
+
+#navigation-links ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#navigation-links ul li a {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    padding: 10px 20px;
+}
+
+#navigation-links ul li a.current-tab {
+    opacity: 0.5;
+}
+
+#navigation-links ul li a#link--contact {
+    border-radius: 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+body.dark-mode #navigation-links ul li a#link--contact {
+    background-color: #fff;
+    color: #000;
+}
+
+#portfolio-intro-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#portfolio-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    max-width: 750px;
+    height: 600px;
+}
+
+#intro-name-container {
+    width: 100%;
+    /* margin-bottom: 0px; */
+}
+
+#intro-name-container p {
+    font-family: "Radian Light", sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 100px;
+}
+
+#intro-name-container h1 {
+    font-family: "Radian Bold", sans-serif;
+    font-size: 8.5rem;
+    line-height: 7.5rem;
+    text-transform: uppercase;
+}
+
+#intro-name-container h1[name-align="right"] {
+    text-align: right;
+}
+
+#portfolio-content #intro-objective-message {
+    font-family: "Radian Extra Light", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#intro-ctas-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#intro-ctas-container button {
+    border-radius: 50px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: 47.5%;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+#intro-ctas-container button#cta--work {
+    background-color: transparent;
+}
+
+#intro-ctas-container button#cta--work {
+    color: #000;
+}
+
+body.dark-mode #intro-ctas-container button#cta--work {
+    color: #fff;
+}
+
+#intro-ctas-container button#cta--contact {
+    background-color: #000;
+    color: #fff;
+}
+
+body.dark-mode #intro-ctas-container button#cta--contact {
+    background-color: #fff;
+    color: #000;
+}
+
+#keyboard-graphic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+#keyboard-container {
+    width: 75%;
+}
+
+#keyboard-container svg {
+    width: 100%;
+    opacity: 0.1;
+}
+
+#keyboard-container svg g g path {
+    stroke: #000;
+}
+
+#keyboard-container svg g g path:not(.lit-key) {
+    fill: #f9f9f9;
+}
+
+body.dark-mode #keyboard-container svg g g path {
+    stroke: #fff;
+}
+
+body.dark-mode #keyboard-container svg g g path:not(.lit-key) {
+    fill: transparent;
+}
+
+.lit-key {
+    fill: #FF0000;
+}
+
+/* #stylistic-line-container {
+    position: absolute;
+}
+
+#stylistic-line-container hr#top-line {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 75vw;
+    color: #000;
+    border: 1px solid #000;
+    height: 1px;
+    opacity: 0.25;
+} */
+
+@font-face {
+    src: url("/assets/fonts/Radian/Radian.ttf");
+    font-family: "Radian";
+}
+
+@font-face {
+    src: url("/assets/fonts/Radian/Radian Light.ttf");
+    font-family: "Radian Light";
+}
+
+@font-face {
+    src: url("/assets/fonts/Radian/Radian ExtraLight.ttf");
+    font-family: "Radian Extra Light";
+}
+
+@font-face {
+    src: url("/assets/fonts/Radian/Radian Bold.ttf");
+    font-family: "Radian Bold";
+}
