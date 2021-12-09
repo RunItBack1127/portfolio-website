@@ -4,9 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    font-size: 16px;
+}
+
 body {
     font-family: "Radian", sans-serif;
-    font-size: 16px;
     background-color: #fff;
     color: #000;
     transition: background 200ms ease-in-out,
@@ -94,8 +97,8 @@ body.dark-mode button {
 }
 
 #socials-container ul li a svg {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     transition: opacity 200ms ease-in-out;
 }
 
@@ -113,6 +116,11 @@ body.dark-mode button {
     text-transform: uppercase;
     letter-spacing: 0.125rem;
     padding: 10px 20px;
+    transition: opacity 200ms ease-in-out;
+}
+
+#navigation-links ul li a:not(#link--contact):not(.current-tab):hover {
+    opacity: 0.25;
 }
 
 #navigation-links ul li a.current-tab {
@@ -189,7 +197,7 @@ body.dark-mode #navigation-links ul li a#link--contact {
     font-size: 2rem;
     text-transform: uppercase;
     width: 47.5%;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     cursor: pointer;
 }
 
@@ -231,6 +239,10 @@ body.dark-mode #intro-ctas-container button#cta--contact {
     opacity: 0.1;
 }
 
+body.dark-mode #keyboard-container svg {
+    opacity: 0.25;
+}
+
 #keyboard-container svg g g path {
     stroke: #000;
 }
@@ -259,21 +271,6 @@ body.dark-mode #keyboard-container svg g g g line {
     fill: #FF0000;
 }
 
-/* #stylistic-line-container {
-    position: absolute;
-}
-
-#stylistic-line-container hr#top-line {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    width: 75vw;
-    color: #000;
-    border: 1px solid #000;
-    height: 1px;
-    opacity: 0.25;
-} */
-
 @font-face {
     src: url("/assets/fonts/Radian/Radian.ttf");
     font-family: "Radian";
@@ -292,4 +289,20 @@ body.dark-mode #keyboard-container svg g g g line {
 @font-face {
     src: url("/assets/fonts/Radian/Radian Bold.ttf");
     font-family: "Radian Bold";
+}
+
+/* Initial media query for refactoring on desktop */
+@media screen and (max-width: 1366px) {
+    :root {
+        font-size: 14px;
+    }
+
+    #site-navigation-desktop {
+        height: 75px;
+    }
+
+    #portfolio-content {
+        transform: translateY(15px);
+        height: 500px;
+    }
 }
