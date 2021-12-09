@@ -267,21 +267,21 @@ body.dark-mode #keyboard-container svg g g path:not(.lit-key) {
 } */
 
 @font-face {
-    src: url("assets/fonts/Radian/Radian.ttf");
+    src: url("/assets/fonts/Radian/Radian.ttf");
     font-family: "Radian";
 }
 
 @font-face {
-    src: url("assets/fonts/Radian/Radian Light.ttf");
+    src: url("/assets/fonts/Radian/Radian Light.ttf");
     font-family: "Radian Light";
 }
 
 @font-face {
-    src: url("assets/fonts/Radian/Radian ExtraLight.ttf");
+    src: url("/assets/fonts/Radian/Radian ExtraLight.ttf");
     font-family: "Radian Extra Light";
 }
 
 @font-face {
-    src: url("assets/fonts/Radian/Radian Bold.ttf");
+    src: url("/assets/fonts/Radian/Radian Bold.ttf");
     font-family: "Radian Bold";
 }
