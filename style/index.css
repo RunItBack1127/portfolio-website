@@ -52,6 +52,10 @@ body.dark-mode button {
     border: 1px solid #fff;
 }
 
+h1 {
+    font-family: "Radian Bold", sans-serif;
+}
+
 .container--fixed {
     position: absolute;
     top: 0;
@@ -169,7 +173,6 @@ body.dark-mode #navigation-links ul li a#link--contact {
 }
 
 #intro-name-container h1 {
-    font-family: "Radian Bold", sans-serif;
     font-size: 8.5rem;
     line-height: 7.5rem;
     text-transform: uppercase;
@@ -269,6 +272,84 @@ body.dark-mode #keyboard-container svg g g g line {
 
 .lit-key {
     fill: #FF0000;
+}
+
+#main-site-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(100vh + 1.75rem);
+    width: 100%;
+}
+
+.site-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+}
+
+.site-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 50px;
+    flex-basis: 47.5%;
+}
+
+body.dark-mode .site-section {
+    border: 1px solid #fff;
+}
+
+.site-section .site-section-inner {
+    width: 90%;
+    margin: 20px 0;
+}
+
+.site-content-container h1.section-header {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    transition: background 200ms ease-in-out;
+}
+
+.site-content-container h1 span {
+    background-color: #fff;
+    padding: 0 75px;
+}
+
+body.dark-mode .site-content-container h1 span {
+    background-color: #070707;
+}
+
+.site-content-container h1.subsection-header {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+#campus-description-container img {
+    width: 250px;
+    margin-right: 25px;
+}
+
+#campus-description-container {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.5rem;
+}
+
+#intro-container {
+    margin-top: 60px;
+}
+
+#intro-container p {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
 }
 
 @font-face {
