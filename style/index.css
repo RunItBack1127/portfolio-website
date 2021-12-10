@@ -308,6 +308,10 @@ body.dark-mode .site-section {
     margin: 20px 0;
 }
 
+.site-content-container h1.header--center {
+    text-align: center;
+}
+
 .site-content-container h1.section-header {
     font-size: 3.5rem;
     line-height: 3.5rem;
@@ -350,6 +354,80 @@ body.dark-mode .site-content-container h1 span {
 #intro-container p {
     margin-bottom: 10px;
     font-size: 1.25rem;
+}
+
+#dev-exp-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#web-dev-exp-container {
+    flex-basis: 45%;
+}
+
+.exp-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.exp-container p {
+    font-size: 1.5rem;
+    flex-basis: 50%;
+}
+
+.exp-gauge-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+.exp-gauge-container .exp-gauge-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+
+.exp-gauge-container .exp-gauge-content svg {
+    width: 15px;
+    height: 15px;
+}
+
+.exp-gauge-container .exp-gauge-content svg circle {
+    fill: transparent;
+    stroke: #000;
+    stroke-width: 2px;
+}
+
+#software-dev-exp-container {
+    flex-basis: 45%;
+}
+
+#skills-container {
+    margin-top: 25px;
+}
+
+.skills-gauge-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.skills-gauge-container p {
+    font-size: 1.35rem;
+    flex-basis: 50%;
+}
+
+.skills-gauge-container span.progress-span {
+    flex-basis: 50%;
+    height: 6px;
+    background: linear-gradient(to right, #000 50%, transparent 50%);
+    border: 1px solid #000;
 }
 
 @font-face {
