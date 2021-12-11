@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 200ms ease-in-out;
 }
 
 :root {
@@ -13,8 +14,6 @@ body {
     font-family: "Radian", sans-serif;
     background-color: #fff;
     color: #000;
-    transition: background 200ms ease-in-out,
-        color 200ms ease-in-out;
     background-color: #fff;
     color: #000;
 }
@@ -105,7 +104,6 @@ h1 {
 #socials-container ul li a svg {
     width: 1.5625rem;
     height: 1.5625rem;
-    transition: opacity 200ms ease-in-out;
 }
 
 #navigation-links {
@@ -122,7 +120,6 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.125rem;
     padding: 10px 20px;
-    transition: opacity 200ms ease-in-out;
 }
 
 #navigation-links ul li a:not(#link--contact):not(.current-tab):hover {
@@ -250,6 +247,7 @@ body.dark-mode #keyboard-container svg {
 
 #keyboard-container svg g g path {
     stroke: #000;
+    transition: none;
 }
 
 #keyboard-container svg g g path:not(.lit-key) {
@@ -286,10 +284,16 @@ body.dark-mode #keyboard-container svg g g g line {
     width: 100%;
 }
 
-.site-content-container {
+#intro-cards-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
+}
+
+.site-content-container {
+    display: flex;
+    flex-direction: column;
     width: 90%;
 }
 
@@ -318,11 +322,33 @@ body.dark-mode .site-section {
     text-align: center;
 }
 
-.site-content-container h1.site-header {
-    font-size: 4.5rem;
-    line-height: 4.5rem;
+.site-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.site-header-container h1.site-header {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
     text-transform: uppercase;
     margin: 60px 0;
+    z-index: 1;
+    background-color: #fff;
+    padding-right: 50px;
+}
+
+.site-header-container .site-header--separator {
+    position: absolute;
+    transform: translateY(1.25rem);
+    width: 90%;
+    z-index: -1;
+}
+
+.site-header-container .site-header--separator hr {
+    color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .site-content-container h1.section-header {
@@ -330,7 +356,6 @@ body.dark-mode .site-section {
     line-height: 3.5rem;
     text-transform: uppercase;
     transform: translateY(-50%);
-    transition: background 200ms ease-in-out;
 }
 
 .site-content-container h1 span {
@@ -457,6 +482,67 @@ body.dark-mode .exp-gauge-container .exp-gauge-content svg.skill-met circle {
 
 body.dark-mode .skills-gauge-container span.progress-span {
     border: 1px solid #fff;
+}
+
+#employment-card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.employment-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 47.5%;
+    border: 1px solid #000;
+    border-radius: 50px;
+}
+
+.employer-info-container {
+    text-align: center;
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+    width: 100%;
+    padding: 2rem 0;
+    border-radius: 50px 50px 0 0;
+}
+
+.employer-info-container h1 {
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+.employer-info-container h2 {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.overlay-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 300px;
+    background-color: #fff;
+    border-radius: 0 0 50px 50px;
+}
+
+.overlay-img-container {
+    position: absolute;
+    opacity: 0.1;
+}
+
+.overlay-text-container {
+    width: 100%;
+}
+
+.overlay-text-container p {
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 @font-face {
