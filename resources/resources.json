@@ -1,0 +1,70 @@
+{
+    "experience": {
+        "webDevStack": [
+            {
+                "name": "HTML5",
+                "proficiency": 4
+            },
+            {
+                "name": "CSS3",
+                "proficiency": 4
+            },
+            {
+                "name": "JavaScript",
+                "proficiency": 4
+            },
+            {
+                "name": "JQuery",
+                "proficiency": 3
+            },
+            {
+                "name": "NodeJS",
+                "proficiency": 3
+            }
+        ],
+        "softwareDevelopment": [
+            {
+                "name": "Java",
+                "proficiency": 4
+            },
+            {
+                "name": "C++",
+                "proficiency": 4
+            },
+            {
+                "name": "C",
+                "proficiency": 3
+            },
+            {
+                "name": "Rust",
+                "proficiency": 2
+            },
+            {
+                "name": "Python",
+                "proficiency": 2
+            }
+        ]
+    },
+    "skills": [
+        {
+            "description": "Server/Client Architecture",
+            "proficiency": 75
+        },
+        {
+            "description": "Responsive Web Design",
+            "proficiency": 80
+        },
+        {
+            "description": "Android Development",
+            "proficiency": 50
+        },
+        {
+            "description": "Backend Design/Implementation",
+            "proficiency": 85
+        },
+        {
+            "description": "UI/UX Design",
+            "proficiency": 35
+        }
+    ]
+}
