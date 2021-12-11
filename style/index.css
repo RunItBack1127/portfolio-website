@@ -279,8 +279,8 @@ body.dark-mode #keyboard-container svg g g g line {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* top: calc(100vh + 1.75rem); */
-    top: 100vh;
+    top: calc(100vh + 1.75rem);
+    /* top: 100vh; */
     width: 100%;
 }
 
@@ -546,22 +546,22 @@ body.dark-mode .skills-gauge-container span.progress-span {
 }
 
 @font-face {
-    src: url("/assets/fonts/Radian/Radian.ttf");
+    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/version-1.1/assets/fonts/Radian/Radian.ttf");
     font-family: "Radian";
 }
 
 @font-face {
-    src: url("/assets/fonts/Radian/Radian Light.ttf");
+    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/version-1.1/assets/fonts/Radian/Radian_Light.ttf");
     font-family: "Radian Light";
 }
 
 @font-face {
-    src: url("/assets/fonts/Radian/Radian ExtraLight.ttf");
+    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/version-1.1/assets/fonts/Radian/Radian_ExtraLight.ttf");
     font-family: "Radian Extra Light";
 }
 
 @font-face {
-    src: url("/assets/fonts/Radian/Radian Bold.ttf");
+    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/version-1.1/assets/fonts/Radian/Radian_Bold.ttf");
     font-family: "Radian Bold";
 }
 
