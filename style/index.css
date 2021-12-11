@@ -6,6 +6,7 @@
 
 :root {
     font-size: 16px;
+    --skill-bar-color: #000;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
 
 body.dark-mode {
     background-color: #070707;
+    --skill-bar-color: #fff;
     color: #fff;
 }
 
@@ -413,8 +415,16 @@ body.dark-mode .site-content-container h1 span {
     stroke-width: 2px;
 }
 
-.exp-gauge-container .exp-gauge-container svg.skill-met circle {
+body.dark-mode .exp-gauge-container .exp-gauge-content svg:not(.skill-met) circle {
+    stroke: #fff;
+}
+
+.exp-gauge-container .exp-gauge-content svg.skill-met circle {
     fill: #000;
+}
+
+body.dark-mode .exp-gauge-container .exp-gauge-content svg.skill-met circle {
+    fill: #fff;
 }
 
 #software-dev-exp-container {
@@ -443,6 +453,10 @@ body.dark-mode .site-content-container h1 span {
     height: 6px;
     /* background: linear-gradient(to right, #000 50%, transparent 50%); */
     border: 1px solid #000;
+}
+
+body.dark-mode .skills-gauge-container span.progress-span {
+    border: 1px solid #fff;
 }
 
 @font-face {

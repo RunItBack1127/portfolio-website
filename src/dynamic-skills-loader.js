@@ -68,7 +68,7 @@ async function _INJECT_SKILLS_CONTENT() {
         const expContainer = document.createElement("div");
         expContainer.classList.add("skills-gauge-container");
         expContainer.innerHTML = `
-            <p>${skill.description}</p>\n<span style=\"background: linear-gradient(to right, #000 ${skill.proficiency}%,
+            <p>${skill.description}</p>\n<span style=\"background: linear-gradient(to right, var(--skill-bar-color) ${skill.proficiency}%,
                 ${skill.proficiency}%, transparent ${100 - skill.proficiency}%);\"
             class=\"progress-span\"></span>`;
         skillsContainer.appendChild(expContainer);
