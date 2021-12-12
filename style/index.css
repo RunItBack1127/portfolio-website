@@ -8,6 +8,11 @@
 :root {
     font-size: 16px;
     --skill-bar-color: #000;
+    --section-header-background-color: #fff;
+    --site-header-separator-color: rgba(0, 0, 0, 0.4);
+    --employee-card-header-background-color: #000;
+    --employee-card-border-color: #000;
+    --employee-card-description-background-color: #fff;
 }
 
 body {
@@ -21,6 +26,11 @@ body {
 body.dark-mode {
     background-color: #070707;
     --skill-bar-color: #fff;
+    --section-header-background-color: #070707;
+    --site-header-separator-color: rgba(255, 255, 255, 0.4);
+    --employee-card-header-background-color: transparent;
+    --employee-card-border-color: #fff;
+    --employee-card-description-background-color: transparent;
     color: #fff;
 }
 
@@ -334,7 +344,7 @@ body.dark-mode .site-section {
     text-transform: uppercase;
     margin: 60px 0 40px;
     z-index: 1;
-    background-color: #fff;
+    background-color: var(--section-header-background-color);
     padding-right: 50px;
 }
 
@@ -346,8 +356,8 @@ body.dark-mode .site-section {
 }
 
 .site-header-container .site-header--separator hr {
-    color: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: var(--site-header-separator-color);
+    border: 1px solid var(--site-header-separator-color);
 }
 
 .site-content-container h1.section-header {
@@ -358,12 +368,8 @@ body.dark-mode .site-section {
 }
 
 .site-content-container h1 span {
-    background-color: #fff;
+    background-color: var(--section-header-background-color);
     padding: 0 75px;
-}
-
-body.dark-mode .site-content-container h1 span {
-    background-color: #070707;
 }
 
 .site-content-container h1.subsection-header {
@@ -494,13 +500,18 @@ body.dark-mode .skills-gauge-container span.progress-span {
     align-items: center;
 }
 
+#employment-card-container:hover .employment-card:not(:hover) {
+    opacity: 0.5;
+    transform: scale(0.85);
+}
+
 .employment-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-basis: 47.5%;
-    border: 1px solid #000;
+    border: 1px solid var(--employee-card-border-color);
     border-radius: 50px;
 }
 
@@ -509,8 +520,8 @@ body.dark-mode .skills-gauge-container span.progress-span {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: var(--employee-card-header-background-color);
+    border: 1px solid var(--employee-card-border-color);
     color: #fff;
     width: 100%;
     padding: 2rem 0;
@@ -556,13 +567,8 @@ body.dark-mode .skills-gauge-container span.progress-span {
     align-items: center;
     width: 100%;
     min-height: 200px;
-    background-color: #fff;
+    background-color: var(--employee-card-description-background-color);
     border-radius: 0 0 50px 50px;
-}
-
-.overlay-img-container {
-    position: absolute;
-    opacity: 0.1;
 }
 
 .overlay-text-container {
