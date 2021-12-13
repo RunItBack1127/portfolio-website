@@ -514,13 +514,14 @@ body.dark-mode .skills-gauge-container span.progress-span {
 .employer-info-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     background-color: var(--employee-card-header-background-color);
     border: 1px solid var(--card-border-color);
     color: #fff;
     width: 100%;
-    padding: 2rem 0;
+    height: 200px;
     border-radius: 50px 50px 0 0;
 }
 
@@ -537,9 +538,9 @@ body.dark-mode .skills-gauge-container span.progress-span {
     width: 100%;
 }
 
-.employer-info-container p {
+/* .employer-info-container p {
     margin-bottom: 20px;
-}
+} */
 
 .employment-links {
     display: flex;
@@ -564,23 +565,26 @@ body.dark-mode .skills-gauge-container span.progress-span {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 200px;
+    min-height: 550px;
     background-color: var(--employee-card-description-background-color);
     border-radius: 0 0 50px 50px;
 }
 
-.overlay-text-container {
+.overlay-container-inner {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 75%;
+    margin: auto 0;
+}
+
+.overlay-text-container {
     width: 100%;
+    margin-bottom: 30px;
 }
 
-.text-container-inner {
-    width: 85%;
-}
-
-.text-container-inner ul {
+.overlay-text-container ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -588,16 +592,16 @@ body.dark-mode .skills-gauge-container span.progress-span {
     list-style: circle outside;
 }
 
-.text-container-inner ul li {
+.overlay-text-container ul li {
     padding-left: 0.75rem;
     margin-bottom: 15px;
 }
 
-.text-container-inner ul li a {
+.overlay-text-container ul li a {
     color: #f00;
 }
 
-.text-container-inner ul li p {
+.overlay-text-container ul li p {
     font-size: 1.25rem;
 }
 
@@ -658,7 +662,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     justify-content: center;
     align-items: center;
     border-radius: 50px 50px 0 0;
-    height: 150px;
+    height: 300px;
 }
 
 .portfolio-content-container {
@@ -706,7 +710,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     margin: 30px 0;
 }
 
-.portfolio-content-inner .link-btn {
+.link-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -716,6 +720,9 @@ body.dark-mode .skills-gauge-container span.progress-span {
     background-color: #000;
     border: 1px solid #000;
     color: #fff;
+}
+
+.link-btn:not(:last-child) {
     margin-bottom: 20px;
 }
 
@@ -724,9 +731,14 @@ body.dark-mode .skills-gauge-container span.progress-span {
     color: #000;
 }
 
+/* .link-btn#linkedin-btn {
+    background-color: #2867b2;
+    color: #fff;
+} */
+
 .link-btn .btn-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 65%;
 }
@@ -736,13 +748,13 @@ body.dark-mode .skills-gauge-container span.progress-span {
     text-transform: uppercase;
     letter-spacing: 0.125rem;
     text-align: center;
-    flex-basis: 75%;
 }
 
 .btn-content svg {
     width: 25px;
     height: 25px;
     fill: #fff;
+    margin-right: 50px;
 }
 
 .link-btn#website-btn .btn-content svg {
