@@ -11,7 +11,7 @@
     --section-header-background-color: #fff;
     --site-header-separator-color: rgba(0, 0, 0, 0.4);
     --employee-card-header-background-color: #000;
-    --employee-card-border-color: #000;
+    --card-border-color: #000;
     --employee-card-description-background-color: #fff;
 }
 
@@ -29,7 +29,7 @@ body.dark-mode {
     --section-header-background-color: #070707;
     --site-header-separator-color: rgba(255, 255, 255, 0.4);
     --employee-card-header-background-color: transparent;
-    --employee-card-border-color: #fff;
+    --card-border-color: #fff;
     --employee-card-description-background-color: transparent;
     color: #fff;
 }
@@ -498,11 +498,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-#employment-card-container:hover .employment-card:not(:hover) {
-    opacity: 0.5;
-    transform: scale(0.85);
+    margin-top: 10px;
 }
 
 .employment-card {
@@ -511,7 +507,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     justify-content: center;
     align-items: center;
     flex-basis: 47.5%;
-    border: 1px solid var(--employee-card-border-color);
+    border: 1px solid var(--card-border-color);
     border-radius: 50px;
 }
 
@@ -521,7 +517,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     align-items: center;
     text-align: center;
     background-color: var(--employee-card-header-background-color);
-    border: 1px solid var(--employee-card-border-color);
+    border: 1px solid var(--card-border-color);
     color: #fff;
     width: 100%;
     padding: 2rem 0;
@@ -547,9 +543,11 @@ body.dark-mode .skills-gauge-container span.progress-span {
 
 .employment-links {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 80px;
+}
+
+.employment-links li:not(:last-child) {
+    margin-right: 20px;
 }
 
 .employment-links li svg {
@@ -601,6 +599,154 @@ body.dark-mode .skills-gauge-container span.progress-span {
 
 .text-container-inner ul li p {
     font-size: 1.25rem;
+}
+
+#download-resume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0 0px;
+}
+
+#resume-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 20px 0;
+}
+
+#resume-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#resume-btn:hover svg {
+    fill: #fff;
+}
+
+#resume-btn svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 50px;
+}
+
+#resume-btn p {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+#portfolio-cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.portfolio-card {
+    border: 1px solid var(--card-border-color);
+    border-radius: 50px;
+    flex-basis: 30%;
+}
+
+.portfolio-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px 50px 0 0;
+    height: 150px;
+}
+
+.portfolio-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--card-border-color);
+    border-radius: 0 0 50px 50px;
+    width: 100%;
+}
+
+.portfolio-content-inner {
+    min-height: 400px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.project-name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-name-container h1 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.project-tech-icons {
+    display: flex;
+    align-items: center;
+}
+
+.project-tech-icons li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.project-tech-icons li svg {
+    width: 25px;
+    height: 25px;
+}
+
+.portfolio-content-inner p {
+    font-size: 1.25rem;
+    margin: 30px 0;
+}
+
+.portfolio-content-inner .link-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    border-radius: 50px;
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.link-btn#website-btn {
+    background-color: transparent;
+    color: #000;
+}
+
+.link-btn .btn-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+
+.btn-content p {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    text-align: center;
+    flex-basis: 75%;
+}
+
+.btn-content svg {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+}
+
+.link-btn#website-btn .btn-content svg {
+    fill: #000;
 }
 
 @font-face {
