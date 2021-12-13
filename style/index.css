@@ -151,6 +151,72 @@ body.dark-mode #navigation-links ul li a#link--contact {
     color: #000;
 }
 
+#site-navigation-desktop-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 10000;
+    opacity: 0.0;
+}
+
+#site-navigation-desktop-scroll.show-scroll-menu {
+    opacity: 1.0;
+}
+
+#scroll-nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+}
+
+#scroll-nav-inner h1 {
+    font-family: "Radian Bold", sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+#scroll-nav-inner nav#scroll-socials-container {
+    width: 150px;
+}
+
+#scroll-nav-inner nav#scroll-socials-container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#scroll-nav-inner nav#scroll-socials-container ul li svg {
+    width: 25px;
+    height: 25px;
+}
+
+#scroll-nav-inner nav#scroll-navigation-links ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#scroll-nav-inner nav#scroll-navigation-links ul li:not(:last-child) {
+    margin-right: 35px;
+}
+
+#scroll-nav-inner nav#scroll-navigation-links ul li a {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
 #portfolio-intro-content {
     display: flex;
     justify-content: center;
