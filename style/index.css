@@ -728,7 +728,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     justify-content: center;
     align-items: center;
     border-radius: 50px 50px 0 0;
-    height: 250px;
+    height: 200px;
 }
 
 .portfolio-content-container {
