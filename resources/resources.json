@@ -66,5 +66,70 @@
             "description": "UI/UX Design",
             "proficiency": 35
         }
+    ],
+    "workExperience": [
+        {
+            "title": "Volunteer Web Developer",
+            "employer": "EcoPRT at NC State",
+            "isCurrentJob": true,
+            "date": {
+                "startDate": "May 2021"
+            },
+            "descriptions": [
+                "Supervised the asset creation, new feature management, and technical design and implementation of the redesigned web domain, leveraging various technologies to offer a fully transformative and modern webpage experience.",
+                "Provided overall maintenance and general upkeep for the website, including updates for events and accounting for new volunteers joining the team throughout the development process.",
+                "Improved overall usability of the existing features from the previous website, enhancing site naviagtion, contact form functionality, and site metadata for optimizing SEO."
+            ],
+            "homePageUrl": "https://ecoprt.com",
+            "linkedInUrl": "https://www.linkedin.com/in/seth-hollar-phd-51a63/"
+        },
+        {
+            "title": "Mathematics Tutor",
+            "employer": "NCSU University Tutorial Center",
+            "isCurrentJob": false,
+            "date": {
+                "startDate": "January 2019",
+                "endDate": "December 2019"
+            },
+            "descriptions": [
+                "Supervised the asset creation, new feature management, and technical design and implementation of the redesigned web domain, leveraging various technologies to offer a fully transformative and modern webpage experience.",
+                "Provided overall maintenance and general upkeep for the website, including updates for events and accounting for new volunteers joining the team throughout the development process.",
+                "Improved overall usability of the existing features from the previous website, enhancing site naviagtion, contact form functionality, and site metadata for optimizing SEO."
+            ],
+            "homePageUrl": "https://asc.dasa.ncsu.edu/",
+            "employerUrl": "https://dasa.ncsu.edu/people/bbwindom/"
+        }
+    ],
+    "portfolio": [
+        {
+            "projectImage": "assets/ecoprt-logo.png",
+            "projectName": "EcoPRT Website Redesign",
+            "technologies": [
+                "TECH_VUE", "TECH_THREEJS"
+            ],
+            "description": "Supervised and led the overall redesign process for the EcoPRT lab website, assuming key roles in commissioning new photography and assets, along with revamping the social media presence to offer a more welcoming environment to new members. Implemented with <b>Vue</b> and <b>Three.js</b>.",
+            "homePageUrl": "https://ecoprt.com",
+            "gitHubUrl": "github.com/RunItBack1127"
+        },
+        {
+            "projectImage": "assets/ecoprt-logo.png",
+            "projectName": "B&#x00FCmbox",
+            "technologies": [
+                "TECH_ELECTRON", "TECH_THREEJS", "TECH_NOBLE"
+            ],
+            "description": "Open source desktop clone replicating the functionality of the UE MEGABOOM mobile app, used for compatibility with LE capable Bluetooth speakers. Features include turning on the speaker remotely, volume and mixing controls, and speaker customization. Implemented using <b>Electron.js</b>, <b>Three.js</b>, and <b>Noble</b> BLE library.",
+            "homePageUrl": "https://ecoprt.com",
+            "gitHubUrl": "github.com/RunItBack1127"
+        },
+        {
+            "projectImage": "assets/ecoprt-logo.png",
+            "projectName": "Sidekick Basketball App",
+            "technologies": [
+                "TECH_JAVA", "TECH_ANDROID", "TECH_NODEJS"
+            ],
+            "description": "Constructed a backend web scraping API for retrieving basketball game data for the NC State Men and Women's Basketball teams - the API is combined with an Android mobile app for displaying upcoming, past, won, and lost games. Implemented with <b>Java</b>, <b>Android Studio</b>, and <b>Node.js</b>.",
+            "homePageUrl": "https://ecoprt.com",
+            "gitHubUrl": "github.com/RunItBack1127"
+        }
     ]
 }

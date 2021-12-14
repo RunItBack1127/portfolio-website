@@ -793,6 +793,10 @@ body.dark-mode .skills-gauge-container span.progress-span {
     margin-bottom: 20px;
 }
 
+.link-btn.hide-work-exp-link {
+    display: none;
+}
+
 .link-btn#website-btn {
     background-color: transparent;
     color: #000;
