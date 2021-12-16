@@ -792,15 +792,19 @@ body.dark-mode .skills-gauge-container span.progress-span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 550px;
+    min-height: 600px;
     width: 90%;
 }
 
 .portfolio-content-inner h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     line-height: 2rem;
     flex-basis: 50%;
     text-align: center;
+    min-height: 100px;
 }
 
 .project-tech-icons {
