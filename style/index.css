@@ -987,4 +987,8 @@ body.dark-mode .skills-gauge-container span.progress-span {
     #main-site-content-container {
         top: calc(100vh + 3.5rem);
     }
+
+    .site-content-container h1 span {
+        padding: 0 50px;
+    }
 }
