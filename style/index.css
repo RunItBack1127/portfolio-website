@@ -282,9 +282,6 @@ body.dark-mode #navigation-links ul li a#link--contact {
 
 #intro-ctas-container button#cta--work {
     background-color: transparent;
-}
-
-#intro-ctas-container button#cta--work {
     color: #000;
 }
 
@@ -374,11 +371,11 @@ body.dark-mode #keyboard-container svg g g g line {
 }
 
 .site-content-container:first-child {
-    margin-bottom: 25px;
+    margin-bottom: 75px;
 }
 
 .site-content-container:not(:last-child):not(:first-child) {
-    margin-bottom: 25px;
+    margin-bottom: 75px;
 }
 
 .intro-card {
@@ -576,6 +573,17 @@ body.dark-mode .skills-gauge-container span.progress-span {
     border-bottom: 1px solid #fff;
 }
 
+.parallax-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("/assets/keyboard-background.jpg");
+    min-height: 500px;
+    width: 100%;
+    opacity: 0.25;
+}
+
 #employment-card-container {
     display: flex;
     justify-content: space-between;
@@ -608,7 +616,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     color: #000;
     width: 100%;
-    height: 150px;
+    height: 12rem;
     border-radius: 50px 50px 0 0;
 }
 
@@ -666,7 +674,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 300px;
+    min-height: 400px;
     background-color: var(--employee-card-description-background-color);
     border-radius: 0 0 50px 50px;
     margin: 35px 0;
@@ -689,7 +697,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
 
 .overlay-text-container p {
     font-size: 1.25rem;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
 }
 
 .overlay-text-container ul {
@@ -732,9 +740,11 @@ body.dark-mode .skills-gauge-container span.progress-span {
     justify-content: center;
     align-items: center;
     flex-basis: 47.5%;
-    background-color: transparent;
     padding: 25px 0;
+    background-color: transparent;
     border: 1px solid #000;
+    border-radius: 50px;
+    opacity: 0.5;
 }
 
 .exp-btn img {
@@ -745,6 +755,11 @@ body.dark-mode .skills-gauge-container span.progress-span {
 
 .exp-btn:not(:last-child) {
     margin-right: 50px;
+}
+
+#resume-linkedin-container .exp-btn:hover {
+    opacity: 1.0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 50px;
 }
 
 .exp-btn p {
@@ -875,13 +890,21 @@ body.dark-mode .skills-gauge-container span.progress-span {
     text-transform: uppercase;
     letter-spacing: 0.125rem;
     text-align: center;
+    flex-basis: 50%;
 }
 
-.btn-content img {
-    width: 25px;
+.btn-content .content-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 25%;
     height: 25px;
+}
+
+.btn-content .content-img img {
+    width: 25px;
+    height: 100%;
     fill: #fff;
-    margin-right: 50px;
 }
 
 .link-btn#website-btn .btn-content svg {
