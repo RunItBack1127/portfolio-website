@@ -907,8 +907,8 @@ body.dark-mode .skills-gauge-container span.progress-span {
     fill: #fff;
 }
 
-.link-btn#website-btn .btn-content svg {
-    fill: #000;
+.link-btn#github-btn .btn-content .content-img img {
+    filter: invert(1);
 }
 
 /* Skill cards container START */
@@ -975,6 +975,80 @@ body.dark-mode .skills-gauge-container span.progress-span {
 /* .skill-card-text p span.framework-emphasis {
     font-weight: 600;
 } */
+
+/* START - Contact container */
+
+#contact-card-form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.contact-card {
+    border: 1px solid #000;
+    border-radius: 50px;
+    flex-basis: 25%;
+}
+
+.contact-card .contact-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 150px;
+    border-radius: 50px 50px 0 0;
+    width: 100%;
+}
+
+.contact-card-header h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.contact-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.contact-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.contact-section .contact-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+}
+
+.contact-section img {
+    width: 40px;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    flex-basis: 45%;
+}
+
+.contact-section p span.contact-description {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
 @font-face {
     src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/version-1.1/assets/fonts/Radian/Radian.ttf");
