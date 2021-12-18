@@ -400,6 +400,11 @@
             </nav>
         </div>
     </header>
+    <div id="dark-mode-container">
+        <button>
+            <img src="assets/dark-mode-icon.webp">
+        </button>
+    </div>
     <section class="container--fixed container--whole" id="portfolio-intro-content">
         <div id="portfolio-content">
             <div id="intro-name-container">
@@ -459,7 +464,7 @@
                 </div>
             </div>
         </section>
-        <div class="parallax-container"></div>
+        <!-- <div class="parallax-container"></div> -->
         <section class="site-content-container" id="skill-cards-container">
             <div class="site-header-container">
                 <h1 class="site-header">Skills</h1>
@@ -758,7 +763,7 @@
             <div id="contact-card-form-container">
                 <div class="contact-card">
                     <div class="contact-card-header">
-                        <h1>Socials</h1>
+                        <h1>Socials &<br>Personal</h1>
                     </div>
                     <div class="contact-card-content">
                         <div class="contact-section">
@@ -779,19 +784,6 @@
                             </div>
                             <p><span class="contact-description">LinkedIn</span><br>linkedin.com/in/wpgreene</p>
                         </div>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card-header">
-                        <h1>Personal</h1>
-                    </div>
-                    <div class="contact-card-content">
-                        <div class="contact-section">
-                            <div class="contact-img">
-                                <img src="assets/location-icon.png">
-                            </div>
-                            <p><span class="contact-description">Address</span><br>351 Initiative Way<br>Raleigh, NC 27606</p>
-                        </div>
                         <div class="contact-section">
                             <div class="contact-img">
                                 <img src="assets/mobile-phone-icon.png">
@@ -800,11 +792,35 @@
                         </div>
                     </div>
                 </div>
-                <form method="POST" action="" id="site-contact-form">
-                    
+                <form method="POST" action="https://formspree.io/f/mlezewgp" id="site-contact-form">
+                    <div id="name-email-container">
+                        <div class="form-field-container upper-form-container" id="name-container">
+                            <label for="name-field">Name</label>
+                            <input type="text" name="name-field" id="name-field">
+                        </div>
+                        <div class="form-field-container form-required upper-form-container" id="email-container">
+                            <label for="_replyto">Email</label>
+                            <input required type="text" name="_replyto" id="email-field">
+                        </div>
+                    </div>
+                    <div class="form-field-container form-required" id="subject-container">
+                        <label for="subject-field">Subject</label>
+                        <input required type="text" name="subject-field" id="subject-field">
+                    </div>
+                    <div class="form-field-container form-required" id="message-container">
+                        <label for="message-field">Message</label>
+                        <textarea required name="message-field" id="message-field"></textarea>
+                    </div>
+                    <div id="send-clear-container">
+                        <button id="clear-btn">Clear</button>
+                        <button type="submit" id="send-btn">Send</button>
+                    </div>
                 </form>
             </div>
         </section>
+        <div id="site-footer">
+            <p>2021 &#x00A9. All rights reserved.</p>
+        </div>
     </section>
     <script src="src/animate-keyboard.js"></script>
     <script src="src/dynamic-content-loader.js"></script>

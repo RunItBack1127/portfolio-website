@@ -13,6 +13,7 @@
     --employee-card-header-background-color: #000;
     --card-border-color: #000;
     --employee-card-description-background-color: #fff;
+    --dark-mode-btn-background-color: #fff;
 }
 
 body {
@@ -31,6 +32,7 @@ body.dark-mode {
     --employee-card-header-background-color: transparent;
     --card-border-color: #fff;
     --employee-card-description-background-color: transparent;
+    --dark-mode-btn-background-color: #070707;
     color: #fff;
 }
 
@@ -371,11 +373,11 @@ body.dark-mode #keyboard-container svg g g g line {
 }
 
 .site-content-container:first-child {
-    margin-bottom: 75px;
+    margin-bottom: 35px;
 }
 
 .site-content-container:not(:last-child):not(:first-child) {
-    margin-bottom: 75px;
+    margin-bottom: 35px;
 }
 
 .intro-card {
@@ -674,7 +676,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 400px;
+    min-height: 325px;
     background-color: var(--employee-card-description-background-color);
     border-radius: 0 0 50px 50px;
     margin: 35px 0;
@@ -807,7 +809,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 600px;
+    min-height: 650px;
     width: 90%;
 }
 
@@ -860,7 +862,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
 }
 
 .link-btn:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .link-btn.hide-work-exp-link {
@@ -981,7 +983,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
 #contact-card-form-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     margin-top: 25px;
 }
@@ -989,7 +991,11 @@ body.dark-mode .skills-gauge-container span.progress-span {
 .contact-card {
     border: 1px solid #000;
     border-radius: 50px;
-    flex-basis: 25%;
+    flex-basis: 30%;
+}
+
+.contact-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 20px;
 }
 
 .contact-card .contact-card-header {
@@ -998,6 +1004,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     align-items: center;
     background-color: #000;
     height: 150px;
+    border: 1px solid #000;
     border-radius: 50px 50px 0 0;
     width: 100%;
 }
@@ -1014,13 +1021,12 @@ body.dark-mode .skills-gauge-container span.progress-span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
+    min-height: 425px;
 }
 
 .contact-section {
-    width: 100%;
+    width: 85%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -1032,7 +1038,8 @@ body.dark-mode .skills-gauge-container span.progress-span {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-basis: 30%;
+    width: 50px;
+    margin-right: 25px;
 }
 
 .contact-section img {
@@ -1040,14 +1047,177 @@ body.dark-mode .skills-gauge-container span.progress-span {
 }
 
 .contact-section p {
-    font-size: 1rem;
-    flex-basis: 45%;
+    font-size: 1.25rem;
 }
 
 .contact-section p span.contact-description {
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+#dark-mode-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--dark-mode-btn-background-color);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    z-index: 1000;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    opacity: 0.65;
+}
+
+#dark-mode-container:hover {
+    opacity: 1.0;
+}
+
+#dark-mode-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#dark-mode-container button img {
+    width: 25px;
+    height: 25px;
+}
+
+body.dark-mode #dark-mode-container button img {
+    filter: invert(1);
+}
+
+/* Form style START */
+
+#site-contact-form {
+    min-height: 600px;
+    flex-basis: 60%;
+}
+
+#name-email-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.form-field-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-field-container.upper-form-container {
+    flex-basis: 47.5%;
+}
+
+.form-field-container label {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    margin-bottom: 15px;
+}
+
+.form-field-container input {
+    border: 1px solid #000;
+    border-radius: 25px;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 20px;
+    font-family: "Radian", sans-serif;
+    font-size: 1.25rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 15px, rgba(17, 17, 26, 0.05) 0px 8px 15px;
+    opacity: 0.25;
+}
+
+.form-field-container input.has-content {
+    opacity: 1.0;
+}
+
+#subject-container {
+    margin-bottom: 40px;
+}
+
+#message-container textarea {
+    font-family: "Radian", sans-serif;
+    font-size: 1.25rem;
+    padding: 10px;
+    border: 1px solid #000;
+    min-height: 175px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 15px, rgba(17, 17, 26, 0.05) 0px 8px 15px;
+    opacity: 0.25;
+}
+
+#message-container textarea.has-content {
+    opacity: 1.0;
+}
+
+#send-clear-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-top: 35px;
+}
+
+#send-clear-container button {
+    cursor: pointer;
+}
+
+#send-clear-container button:disabled {
+    opacity: 0.5;
+}
+
+#send-clear-container #clear-btn {
+    width: 200px;
+    height: 60px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    background-color: transparent;
+    color: #000;
+    margin-right: 25px;
+}
+
+#send-clear-container #send-btn {
+    width: 200px;
+    height: 60px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    background-color: #070707;
+    color: #fff;
+}
+
+.form-required label::after {
+    content: '*';
+    font-size: 1rem;
+    margin-left: 5px;
+    position: relative;
+    top: -0.25rem;
+    color: #f00;
+}
+
+#site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background-color: #070707;
+}
+
+#site-footer p {
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 @font-face {
