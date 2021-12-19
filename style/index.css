@@ -79,6 +79,11 @@ body.dark-mode img.dark-mode-img-flip {
 
 button {
     border: 1px solid var(--site-border-color);
+    cursor: pointer;
+}
+
+span {
+    display: block;
 }
 
 .container--fixed {
@@ -90,6 +95,12 @@ button {
 .container--whole {
     width: 100%;
     height: 100vh;
+}
+
+span.navigation-contact,
+span.navigation-portfolio,
+span.navigation-skills {
+    cursor: pointer;
 }
 
 #site-navigation-desktop {
@@ -121,11 +132,13 @@ button {
     width: 100%;
 }
 
-#socials-container ul:hover li a svg:not(:hover) {
+#socials-container ul:hover li a svg:not(:hover),
+#socials-container ul:hover li span svg:not(:hover) {
     opacity: 0.25;
 }
 
-#socials-container ul li a svg {
+#socials-container ul li a svg,
+#socials-container ul li span svg {
     width: 1.5625rem;
     height: 1.5625rem;
 }
@@ -139,6 +152,7 @@ button {
     justify-content: space-between;
 }
 
+#navigation-links ul li span,
 #navigation-links ul li a {
     font-size: 1.125rem;
     text-transform: uppercase;
@@ -146,21 +160,22 @@ button {
     padding: 10px 20px;
 }
 
-#navigation-links ul li a:not(#link--contact):not(.current-tab):hover {
+#navigation-links ul li span:not(#link--contact):not(.current-tab):hover
+#navigation-links ul li a:hover {
     opacity: 0.25;
 }
 
-#navigation-links ul li a.current-tab {
+#navigation-links ul li span.current-tab {
     opacity: 0.5;
 }
 
-#navigation-links ul li a#link--contact {
+#navigation-links ul li span#link--contact {
     border-radius: 50px;
     background-color: #000;
     color: #fff;
 }
 
-body.dark-mode #navigation-links ul li a#link--contact {
+body.dark-mode #navigation-links ul li button#link--contact {
     background-color: #fff;
     color: #000;
 }
@@ -211,7 +226,8 @@ body.dark-mode #navigation-links ul li a#link--contact {
     width: 100%;
 }
 
-#scroll-nav-inner nav#scroll-socials-container ul li svg {
+#scroll-nav-inner nav#scroll-socials-container ul li a svg,
+#scroll-nav-inner nav#scroll-socials-container ul li span svg {
     width: 25px;
     height: 25px;
 }
@@ -226,7 +242,8 @@ body.dark-mode #navigation-links ul li a#link--contact {
     margin-right: 35px;
 }
 
-#scroll-nav-inner nav#scroll-navigation-links ul li a {
+#scroll-nav-inner nav#scroll-navigation-links ul li a,
+#scroll-nav-inner nav#scroll-navigation-links ul li span {
     font-size: 1.25rem;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
@@ -285,7 +302,7 @@ body.dark-mode #navigation-links ul li a#link--contact {
     width: 100%;
 }
 
-#intro-ctas-container a {
+#intro-ctas-container button {
     border: 1px solid var(--site-border-color);
     border-radius: 50px;
     font-size: 2rem;
@@ -295,16 +312,16 @@ body.dark-mode #navigation-links ul li a#link--contact {
     text-align: center;
 }
 
-#intro-ctas-container a#cta--work {
+#intro-ctas-container button#cta--work {
     background-color: transparent;
 }
 
-#intro-ctas-container a#cta--contact {
+#intro-ctas-container button#cta--contact {
     background-color: #000;
     color: #fff;
 }
 
-body.dark-mode #intro-ctas-container a#cta--contact {
+body.dark-mode #intro-ctas-container button#cta--contact {
     background-color: #fff;
     color: #000;
 }
@@ -777,7 +794,7 @@ body.dark-mode .overlay-container-inner a#supervisor-container p {
 }
 
 .portfolio-img-container img {
-    width: 75px;
+    width: 50px;
 }
 
 .portfolio-content-container {
@@ -1064,7 +1081,6 @@ body.dark-mode .contact-card .contact-card-header {
     border-radius: 50px;
     background-color: transparent;
     border: none;
-    cursor: pointer;
 }
 
 #dark-mode-container button img {
