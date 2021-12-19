@@ -314,6 +314,7 @@ body.dark-mode #navigation-links ul li button#link--contact {
 
 #intro-ctas-container button#cta--work {
     background-color: transparent;
+    color: var(--site-content-color);
 }
 
 #intro-ctas-container button#cta--contact {
