@@ -160,7 +160,7 @@ span.navigation-skills {
     padding: 10px 20px;
 }
 
-#navigation-links ul li span:not(#link--contact):not(.current-tab):hover
+#navigation-links ul li span:not(#link--contact):not(.current-tab):hover,
 #navigation-links ul li a:hover {
     opacity: 0.25;
 }
@@ -1219,9 +1219,37 @@ body.dark-mode #site-footer {
     border-top: 1px solid #fff;
 }
 
-#site-footer p {
-    font-size: 1.25rem;
+#site-footer #footer-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+#footer-contents p {
+    font-size: 1rem;
     color: #fff;
+}
+
+#footer-contents ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+#footer-contents ul li a svg,
+#footer-contents ul li a img {
+    width: 25px;
+    height: 25px;
+}
+
+#footer-contents ul li a svg {
+    fill: #fff;
+}
+
+#footer-contents ul li a img {
+    filter: invert(1);
 }
 
 @font-face {
