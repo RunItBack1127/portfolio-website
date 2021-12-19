@@ -7,37 +7,57 @@
 
 :root {
     font-size: 16px;
-    --skill-bar-color: #000;
+
+    /* Primary colors */
+    --primary-color-1: #000;
+    --primary-color-2: #fff;
+    --primary-color-3: #070707;
+    --secondary-color-1: #f00;  /* Required form input */
+
+    /* Fonts */
+    --site-font-1: "Radian", sans-serif;
+    --site-font-2: "Radian Bold", sans-serif;
+    --site-font-3: "Radian Light", sans-serif;
+    --site-font-4: "Radian Extra Light", sans-serif;
+
+    --site-border-color: #000;
+    --scroll-nav-background-color: #fff;
+    --card-header-bottom-border-color: rgba(0, 0, 0, 0.25);
     --section-header-background-color: #fff;
     --site-header-separator-color: rgba(0, 0, 0, 0.4);
-    --employee-card-header-background-color: #000;
+    --skill-bar-color: #000;
     --card-border-color: #000;
-    --employee-card-description-background-color: #fff;
-    --dark-mode-btn-background-color: #fff;
 }
 
 body {
-    font-family: "Radian", sans-serif;
-    background-color: #fff;
-    color: #000;
-    background-color: #fff;
-    color: #000;
+    font-family: var(--site-font-1);
+    background-color: var(--site-background-color);
+    color: var(--site-content-color);
 }
 
 body.dark-mode {
-    background-color: #070707;
+    --site-background-color: var(--primary-color-3);
+    --site-content-color: var(--primary-color-2);
+
+    --site-border-color: #fff;
+    --scroll-nav-background-color: #000;
+    --card-header-bottom-border-color: rgba(255, 255, 255, 0.25);
     --skill-bar-color: #fff;
     --section-header-background-color: #070707;
     --site-header-separator-color: rgba(255, 255, 255, 0.4);
-    --employee-card-header-background-color: transparent;
     --card-border-color: #fff;
-    --employee-card-description-background-color: transparent;
-    --dark-mode-btn-background-color: #070707;
-    color: #fff;
 }
 
 ul {
     list-style: none;
+}
+
+h1 {
+    font-family: var(--site-font-2);
+}
+
+h1, h2, p, a {
+    color: var(--site-content-color);
 }
 
 a, img, svg {
@@ -45,12 +65,7 @@ a, img, svg {
 }
 
 a {
-    color: #000;
     text-decoration: none;
-}
-
-body.dark-mode a {
-    color: #fff;
 }
 
 img {
@@ -58,16 +73,12 @@ img {
     object-fit: cover;
 }
 
+body.dark-mode img.dark-mode-img-flip {
+    filter: invert(1);
+}
+
 button {
-    border: 1px solid #000;
-}
-
-body.dark-mode button {
-    border: 1px solid #fff;
-}
-
-h1 {
-    font-family: "Radian Bold", sans-serif;
+    border: 1px solid var(--site-border-color);
 }
 
 .container--fixed {
@@ -163,7 +174,8 @@ body.dark-mode #navigation-links ul li a#link--contact {
     align-items: flex-start;
     width: 100%;
     height: 100px;
-    background-color: #fff;
+    background-color: var(--scroll-nav-background-color);
+    color: var(--site-content-color);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     z-index: 500;
     opacity: 0.0;
@@ -182,7 +194,7 @@ body.dark-mode #navigation-links ul li a#link--contact {
 }
 
 #scroll-nav-inner h1 {
-    font-family: "Radian Bold", sans-serif;
+    font-family: var(--site-font-2);
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
@@ -273,30 +285,26 @@ body.dark-mode #navigation-links ul li a#link--contact {
     width: 100%;
 }
 
-#intro-ctas-container button {
+#intro-ctas-container a {
+    border: 1px solid var(--site-border-color);
     border-radius: 50px;
     font-size: 2rem;
     text-transform: uppercase;
     width: 47.5%;
     padding: 1.25rem 0;
-    cursor: pointer;
+    text-align: center;
 }
 
-#intro-ctas-container button#cta--work {
+#intro-ctas-container a#cta--work {
     background-color: transparent;
-    color: #000;
 }
 
-body.dark-mode #intro-ctas-container button#cta--work {
-    color: #fff;
-}
-
-#intro-ctas-container button#cta--contact {
+#intro-ctas-container a#cta--contact {
     background-color: #000;
     color: #fff;
 }
 
-body.dark-mode #intro-ctas-container button#cta--contact {
+body.dark-mode #intro-ctas-container a#cta--contact {
     background-color: #fff;
     color: #000;
 }
@@ -350,6 +358,20 @@ body.dark-mode #keyboard-container svg g g g line {
     fill: #FF0000;
 }
 
+.card-border {
+    border: 1px solid var(--site-border-color);
+    border-radius: 50px;
+}
+
+.card-header-border {
+    border-radius: 50px 50px 0 0;
+    border-bottom: 1px solid var(--card-header-bottom-border-color);
+}
+
+.card-footer-border {
+    border-radius: 0 0 50px 50px;
+}
+
 #main-site-content-container {
     display: flex;
     flex-direction: column;
@@ -372,11 +394,7 @@ body.dark-mode #keyboard-container svg g g g line {
     width: 90%;
 }
 
-.site-content-container:first-child {
-    margin-bottom: 35px;
-}
-
-.site-content-container:not(:last-child):not(:first-child) {
+.site-content-container:not(:last-child) {
     margin-bottom: 35px;
 }
 
@@ -385,8 +403,6 @@ body.dark-mode #keyboard-container svg g g g line {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid #000;
-    border-radius: 50px;
     flex-basis: 47.5%;
     min-height: 660px;
 }
@@ -575,17 +591,6 @@ body.dark-mode .skills-gauge-container span.progress-span {
     border-bottom: 1px solid #fff;
 }
 
-.parallax-container {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-image: url("/assets/keyboard-background.jpg");
-    min-height: 500px;
-    width: 100%;
-    opacity: 0.25;
-}
-
 #employment-card-container {
     display: flex;
     justify-content: space-between;
@@ -599,8 +604,6 @@ body.dark-mode .skills-gauge-container span.progress-span {
     justify-content: center;
     align-items: center;
     flex-basis: 47.5%;
-    border: 1px solid var(--card-border-color);
-    border-radius: 50px;
 }
 
 .employment-card:hover {
@@ -615,11 +618,9 @@ body.dark-mode .skills-gauge-container span.progress-span {
     align-items: center;
     text-align: center;
     background-color: transparent;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     color: #000;
     width: 100%;
     height: 12rem;
-    border-radius: 50px 50px 0 0;
 }
 
 .employer-info-container h1 {
@@ -634,10 +635,6 @@ body.dark-mode .skills-gauge-container span.progress-span {
     font-size: 1.5rem;
     width: 100%;
 }
-
-/* .employer-info-container p {
-    margin-bottom: 20px;
-} */
 
 .employer-logo-container {
     display: flex;
@@ -662,23 +659,12 @@ body.dark-mode .skills-gauge-container span.progress-span {
     margin-right: 20px;
 }
 
-.employment-links li svg {
-    width: 25px;
-    height: 25px;
-}
-
-.employment-links li svg path {
-    fill: #fff;
-}
-
 .overlay-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     min-height: 325px;
-    background-color: var(--employee-card-description-background-color);
-    border-radius: 0 0 50px 50px;
     margin: 35px 0;
 }
 
@@ -688,6 +674,23 @@ body.dark-mode .skills-gauge-container span.progress-span {
     justify-content: center;
     align-items: center;
     width: 75%;
+}
+
+.overlay-container-inner a {
+    border: 1px solid var(--site-border-color);
+}
+
+.overlay-container-inner a#homepage-container {
+    background-color: transparent;
+    color: #000;
+}
+
+body.dark-mode .overlay-container-inner a#supervisor-container {
+    background-color: #fff;
+}
+
+body.dark-mode .overlay-container-inner a#supervisor-container p {
+    color: #000;
 }
 
 .overlay-text-container {
@@ -700,27 +703,6 @@ body.dark-mode .skills-gauge-container span.progress-span {
 .overlay-text-container p {
     font-size: 1.25rem;
     margin-bottom: 75px;
-}
-
-.overlay-text-container ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    list-style: circle outside;
-}
-
-.overlay-text-container ul li {
-    padding-left: 0.75rem;
-    margin-bottom: 15px;
-}
-
-.overlay-text-container ul li a {
-    color: #f00;
-}
-
-.overlay-text-container ul li p {
-    font-size: 1.25rem;
 }
 
 #view-resume-container {
@@ -791,16 +773,17 @@ body.dark-mode .skills-gauge-container span.progress-span {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px 50px 0 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     height: 150px;
+}
+
+.portfolio-img-container img {
+    width: 75px;
 }
 
 .portfolio-content-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0 0 50px 50px;
     width: 100%;
 }
 
@@ -822,6 +805,27 @@ body.dark-mode .skills-gauge-container span.progress-span {
     flex-basis: 50%;
     text-align: center;
     min-height: 100px;
+}
+
+.portfolio-content-inner .link-btn#website-btn {
+    background-color: transparent;
+    color: #000;
+}
+
+.portfolio-content-inner .link-btn#github-btn .btn-content .content-img img {
+    filter: invert(1);
+}
+
+body.dark-mode .portfolio-content-inner .link-btn#github-btn {
+    background-color: #fff;
+}
+
+body.dark-mode .portfolio-content-inner .link-btn#github-btn p {
+    color: #000;
+}
+
+body.dark-mode .portfolio-content-inner .link-btn#github-btn .btn-content .content-img img {
+    filter: unset;
 }
 
 .project-tech-icons {
@@ -857,27 +861,13 @@ body.dark-mode .skills-gauge-container span.progress-span {
     height: 4rem;
     border-radius: 50px;
     background-color: #000;
-    border: 1px solid #000;
+    border: 1px solid var(--site-border-color);
     color: #fff;
 }
 
 .link-btn:not(:last-child) {
     margin-bottom: 30px;
 }
-
-.link-btn.hide-work-exp-link {
-    display: none;
-}
-
-.link-btn#website-btn {
-    background-color: transparent;
-    color: #000;
-}
-
-/* .link-btn#linkedin-btn {
-    background-color: #2867b2;
-    color: #fff;
-} */
 
 .link-btn .btn-content {
     display: flex;
@@ -905,12 +895,6 @@ body.dark-mode .skills-gauge-container span.progress-span {
 
 .btn-content .content-img img {
     width: 25px;
-    height: 100%;
-    fill: #fff;
-}
-
-.link-btn#github-btn .btn-content .content-img img {
-    filter: invert(1);
 }
 
 /* Skill cards container START */
@@ -931,9 +915,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
     justify-content: center;
     align-items: center;
     flex-basis: calc(30% + 20px);
-    border: 1px solid #000;
     min-height: 250px;
-    border-radius: 50px;
 }
 
 .skill-card:hover {
@@ -946,7 +928,6 @@ body.dark-mode .skills-gauge-container span.progress-span {
     align-items: center;
     width: 100%;
     height: 100px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .skill-card-header img {
@@ -989,8 +970,6 @@ body.dark-mode .skills-gauge-container span.progress-span {
 }
 
 .contact-card {
-    border: 1px solid #000;
-    border-radius: 50px;
     flex-basis: 30%;
 }
 
@@ -1004,9 +983,11 @@ body.dark-mode .skills-gauge-container span.progress-span {
     align-items: center;
     background-color: #000;
     height: 150px;
-    border: 1px solid #000;
-    border-radius: 50px 50px 0 0;
     width: 100%;
+}
+
+body.dark-mode .contact-card .contact-card-header {
+    background-color: transparent;
 }
 
 .contact-card-header h1 {
@@ -1127,7 +1108,7 @@ body.dark-mode #dark-mode-container button img {
 }
 
 .form-field-container input {
-    border: 1px solid #000;
+    border: 1px solid var(--site-border-color);
     border-radius: 25px;
     width: 100%;
     height: 3.5rem;
@@ -1150,7 +1131,7 @@ body.dark-mode #dark-mode-container button img {
     font-family: "Radian", sans-serif;
     font-size: 1.25rem;
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid var(--site-border-color);
     min-height: 175px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 15px, rgba(17, 17, 26, 0.05) 0px 8px 15px;
     opacity: 0.25;
@@ -1168,14 +1149,6 @@ body.dark-mode #dark-mode-container button img {
     margin-top: 35px;
 }
 
-#send-clear-container button {
-    cursor: pointer;
-}
-
-#send-clear-container button:disabled {
-    opacity: 0.5;
-}
-
 #send-clear-container #clear-btn {
     width: 200px;
     height: 60px;
@@ -1187,6 +1160,10 @@ body.dark-mode #dark-mode-container button img {
     margin-right: 25px;
 }
 
+body.dark-mode #send-clear-container #clear-btn {
+    color: #fff;
+}
+
 #send-clear-container #send-btn {
     width: 200px;
     height: 60px;
@@ -1195,6 +1172,11 @@ body.dark-mode #dark-mode-container button img {
     letter-spacing: 0.25rem;
     background-color: #070707;
     color: #fff;
+}
+
+body.dark-mode #send-clear-container #send-btn {
+    background-color: #fff;
+    color: #000;
 }
 
 .form-required label::after {
@@ -1213,6 +1195,11 @@ body.dark-mode #dark-mode-container button img {
     width: 100%;
     height: 75px;
     background-color: #070707;
+    border-top: 1px solid #000;
+}
+
+body.dark-mode #site-footer {
+    border-top: 1px solid #fff;
 }
 
 #site-footer p {
