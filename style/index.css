@@ -175,7 +175,7 @@ span.navigation-skills {
     color: #fff;
 }
 
-body.dark-mode #navigation-links ul li button#link--contact {
+body.dark-mode #navigation-links ul li span#link--contact {
     background-color: #fff;
     color: #000;
 }
