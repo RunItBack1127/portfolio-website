@@ -180,7 +180,7 @@ body.dark-mode #navigation-links ul li span#link--contact {
     color: #000;
 }
 
-#mobile-nav-container {
+/* #mobile-nav-container {
     position: absolute;
     top: 12.5px;
     right: 50px;
@@ -197,7 +197,7 @@ body.dark-mode #navigation-links ul li span#link--contact {
     height: 100%;
     background-color: transparent;
     border: none;
-}
+} */
 
 #site-navigation-menu-scroll {
     position: fixed;
@@ -1296,9 +1296,9 @@ body.dark-mode #site-footer {
         display: none;
     }
 
-    #mobile-nav-container {
+    /* #mobile-nav-container {
         display: flex;
-    }
+    } */
 }
 
 /* Initial media query for refactoring on desktop */
