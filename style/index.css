@@ -849,6 +849,11 @@ body.dark-mode .overlay-container-inner a#supervisor-container p {
     color: #000;
 }
 
+.portfolio-content-inner .link-btn.not-implemented {
+    cursor: default;
+    pointer-events: none;
+}
+
 .portfolio-content-inner .link-btn#github-btn .btn-content .content-img img {
     filter: invert(1);
 }
