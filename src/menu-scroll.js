@@ -1,4 +1,4 @@
-const scrollMenu = document.querySelector("#site-navigation-desktop-scroll");
+const scrollMenu = document.querySelector("#site-navigation-menu-scroll");
 
 window.addEventListener("scroll", () => {
     if(window.scrollY >= 200) {
