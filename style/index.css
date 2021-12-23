@@ -829,7 +829,7 @@ body.dark-mode .overlay-container-inner a#supervisor-container p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 650px;
+    min-height: 625px;
     width: 90%;
 }
 
@@ -841,7 +841,7 @@ body.dark-mode .overlay-container-inner a#supervisor-container p {
     line-height: 2rem;
     flex-basis: 50%;
     text-align: center;
-    min-height: 100px;
+    min-height: 75px;
 }
 
 .portfolio-content-inner .link-btn#website-btn {
