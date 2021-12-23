@@ -57,3 +57,7 @@ clearBtn.addEventListener("click", (event) => {
     event.preventDefault();
     clearFormInputs();
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+    clearFormInputs();
+});
