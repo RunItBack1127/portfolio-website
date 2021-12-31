@@ -1277,22 +1277,22 @@ body.dark-mode #site-footer {
 }
 
 @font-face {
-    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/version-1.1/assets/fonts/Radian/Radian.ttf");
+    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/main/assets/fonts/Radian/Radian.ttf");
     font-family: "Radian";
 }
 
 @font-face {
-    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/version-1.1/assets/fonts/Radian/Radian_Light.ttf");
+    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/main/assets/fonts/Radian/Radian_Light.ttf");
     font-family: "Radian Light";
 }
 
 @font-face {
-    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/version-1.1/assets/fonts/Radian/Radian_ExtraLight.ttf");
+    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/main/assets/fonts/Radian/Radian_ExtraLight.ttf");
     font-family: "Radian Extra Light";
 }
 
 @font-face {
-    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/version-1.1/assets/fonts/Radian/Radian_Bold.ttf");
+    src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/main/assets/fonts/Radian/Radian_Bold.ttf");
     font-family: "Radian Bold";
 }
 
