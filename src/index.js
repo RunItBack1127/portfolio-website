@@ -15,19 +15,31 @@ const contactNavSpans = document.querySelectorAll(".navigation-contact");
 
 for(const skillNav of skillNavSpans) {
     skillNav.addEventListener("click", () => {
-        $('body').scrollTo('#skills-container', SCROLL_DURATION);
+        $('body').scrollTo('#skill-cards-container', SCROLL_DURATION, {
+            offset: {
+                top: -50
+            }
+        });
     });
 }
 
 for(const portNav of portfolioNavSpans) {
     portNav.addEventListener("click", () => {
-        $('body').scrollTo('#portfolio-container', SCROLL_DURATION);
+        $('body').scrollTo('#portfolio-container', SCROLL_DURATION, {
+            offset: {
+                top: -50
+            }
+        });
     });
 }
 
 for(const contactNav of contactNavSpans) {
     contactNav.addEventListener("click", () => {
-        $('body').scrollTo('#contact-container', SCROLL_DURATION);
+        $('body').scrollTo('#contact-container', SCROLL_DURATION, {
+            offset: {
+                top: -50
+            }
+        });
     });
 }
 
