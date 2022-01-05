@@ -42,34 +42,3 @@ for(const contactNav of contactNavSpans) {
         });
     });
 }
-
-// Forms
-const formInputs = [...document.querySelectorAll(".form-field-container input"),
-    document.querySelector("#site-contact-form #message-container textarea")];
-for(const formInput of formInputs) {
-    formInput.addEventListener("input", () => {
-        if(formInput.value !== "") {
-            formInput.classList.add("has-content");
-        }
-        else {
-            formInput.classList.remove("has-content");
-        }
-    });
-}
-
-function clearFormInputs() {
-    for(const formInput of formInputs) {
-        formInput.value = "";
-        formInput.classList.remove("has-content");
-    }
-}
-
-const clearBtn = document.querySelector("#site-contact-form #send-clear-container #clear-btn");
-clearBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    clearFormInputs();
-});
-
-window.addEventListener("DOMContentLoaded", () => {
-    clearFormInputs();
-});
