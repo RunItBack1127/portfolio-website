@@ -97,12 +97,6 @@ span {
     height: 100vh;
 }
 
-span.navigation-contact,
-span.navigation-portfolio,
-span.navigation-skills {
-    cursor: pointer;
-}
-
 #site-navigation-menu {
     display: flex;
     justify-content: center;
@@ -158,6 +152,7 @@ span.navigation-skills {
     text-transform: uppercase;
     letter-spacing: 0.125rem;
     padding: 10px 20px;
+	cursor: pointer;
 }
 
 #navigation-links ul li span:not(#link--contact):not(.current-tab):hover,
@@ -266,6 +261,7 @@ body.dark-mode #navigation-links ul li span#link--contact {
     font-size: 1.25rem;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
+	cursor: pointer;
 }
 
 #portfolio-intro-content {
