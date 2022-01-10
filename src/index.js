@@ -7,6 +7,14 @@ darkModeBtn.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
 });
 
+// Home tab click listeners
+const homeTabs = document.querySelectorAll(".home-tab");
+for(const homeTab of homeTabs) {
+	homeTab.addEventListener("click", () => {
+		$('body').scrollTo('#portfolio-intro-content', SCROLL_DURATION);
+	});
+}
+
 // Skills, portfolio, contact
 // click listeners
 const skillNavSpans = document.querySelectorAll(".navigation-skills");
