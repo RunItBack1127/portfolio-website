@@ -240,6 +240,11 @@ body.dark-mode #navigation-links ul li span#link--contact {
     width: 100%;
 }
 
+#scroll-nav-inner nav#scroll-socials-container ul li a,
+#scroll-nav-inner nav#scroll-socials-container ul li span {
+	cursor: pointer;
+}
+
 #scroll-nav-inner nav#scroll-socials-container ul li a svg,
 #scroll-nav-inner nav#scroll-socials-container ul li span svg {
     width: 25px;
