@@ -8,6 +8,8 @@
 :root {
     font-size: 16px;
 
+    --site-menu-height: 100px;
+
     /* Primary colors */
     --primary-color-1: #000;
     --primary-color-2: #fff;
@@ -28,6 +30,7 @@
     --skill-bar-color: #000;
     --card-border-color: #000;
     --site-form-loading-screen-background-color: rgba(255, 255, 255, 0.75);
+    --mobile-hamburger-path-fill: #000;
 }
 
 body {
@@ -48,6 +51,7 @@ body.dark-mode {
     --site-header-separator-color: rgba(255, 255, 255, 0.4);
     --card-border-color: #fff;
     --site-form-loading-screen-background-color: rgba(0, 0, 0, 0.75);
+    --mobile-hamburger-path-fill: #fff;
 }
 
 ul {
@@ -104,7 +108,7 @@ span {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: var(--site-menu-height);
     z-index: 1000;
 }
 
@@ -204,7 +208,7 @@ body.dark-mode #navigation-links ul li span#link--contact {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: 100px;
+    height: var(--site-menu-height);
     background-color: var(--scroll-nav-background-color);
     color: var(--site-content-color);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -271,6 +275,23 @@ body.dark-mode #navigation-links ul li span#link--contact {
 	cursor: pointer;
 }
 
+#mobile-hamburger-container {
+    display: none;
+    width: 40px;
+    height: 21px;
+}
+
+#mobile-hamburger-container #mobile-menu-cta {
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+#mobile-menu-cta svg rect {
+    fill: var(--mobile-hamburger-path-fill);
+}
+
 #portfolio-intro-content {
     display: flex;
     justify-content: center;
@@ -283,9 +304,10 @@ body.dark-mode #navigation-links ul li span#link--contact {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 80%;
     max-width: 750px;
-    height: 600px;
+    font-size: 2.5rem;
+    height: calc(100vh - ( var(--site-menu-height) + 50px) );
 }
 
 #intro-name-container {
@@ -295,15 +317,16 @@ body.dark-mode #navigation-links ul li span#link--contact {
 
 #intro-name-container p {
     font-family: var(--site-font-3);
-    font-size: 2.5rem;
+    font-size: 1em;
     text-transform: uppercase;
     text-align: right;
     margin-right: 100px;
+    width: 100%;
 }
 
 #intro-name-container h1 {
-    font-size: 8.5rem;
-    line-height: 7.5rem;
+    font-size: 3.4em;
+    line-height: 0.88235em;
     text-transform: uppercase;
 }
 
@@ -313,12 +336,13 @@ body.dark-mode #navigation-links ul li span#link--contact {
 
 #portfolio-content #intro-objective-message {
     font-family: var(--site-font-4);
-    font-size: 2rem;
+    font-size: 0.8em;
     text-align: center;
 }
 
 #intro-ctas-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -329,7 +353,7 @@ body.dark-mode #navigation-links ul li span#link--contact {
     border-radius: 50px;
     font-size: 2rem;
     text-transform: uppercase;
-    width: 47.5%;
+    flex-basis: 320px;
     padding: 1.25rem 0;
     text-align: center;
 }
@@ -358,6 +382,7 @@ body.dark-mode #intro-ctas-container button#cta--contact {
 
 #keyboard-container {
     width: 75%;
+    min-width: 900px;
 }
 
 #keyboard-container svg {
@@ -1331,9 +1356,44 @@ body.dark-mode #site-footer {
     font-family: "Radian Bold";
 }
 
+@media screen and (max-width: 576px) {
+    #portfolio-content {
+        font-size: 2rem;
+    }
+
+    #intro-name-container h1 {
+        font-size: 2.75em;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 800px) {
+    #portfolio-content {
+        font-size: 2.25rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #intro-ctas-container button {
+        flex-basis: 100%;
+        max-width: 500px;
+    }
+
+    #intro-ctas-container button:last-child {
+        margin-top: 25px;
+    }
+
+    #intro-ctas-container {
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     #site-navigation-menu #navigation-links {
         display: none;
+    }
+
+    #site-navigation-menu #mobile-hamburger-container {
+        display: block;
     }
 
     /* #mobile-nav-container {
@@ -1348,12 +1408,12 @@ body.dark-mode #site-footer {
     }
 
     #site-navigation-menu {
-        height: 75px;
+        --site-menu-height: 75px;
     }
 
     #portfolio-content {
         transform: translateY(15px);
-        height: 500px;
+        max-width: 674.5px;
     }
 
     #main-site-content-container {
