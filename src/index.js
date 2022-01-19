@@ -8,10 +8,12 @@ darkModeBtn.addEventListener("click", () => {
 });
 
 // Home tab click listener
-const homeTab = document.querySelector("#home-tab");
-homeTab.addEventListener("click", () => {
-	$('body').scrollTo('#portfolio-intro-content', SCROLL_DURATION);
-});
+const homeTabs = document.querySelectorAll(".home-tab");
+for(const homeTab of homeTabs) {
+    homeTab.addEventListener("click", () => {
+        $('body').scrollTo('#portfolio-intro-content', SCROLL_DURATION);
+    });
+}
 
 // Skills, portfolio, contact
 // click listeners
@@ -21,7 +23,7 @@ const contactNavSpans = document.querySelectorAll(".navigation-contact");
 
 for(const skillNav of skillNavSpans) {
     skillNav.addEventListener("click", () => {
-        $('body').scrollTo('#skill-cards-container', SCROLL_DURATION, {
+        $('body').scrollTo('#dev-skills-container', SCROLL_DURATION, {
             offset: {
                 top: -50
             }
