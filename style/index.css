@@ -377,6 +377,7 @@ body.dark-mode #intro-ctas-container button#cta--contact {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
     z-index: -1;
 }
 
@@ -834,16 +835,14 @@ body.dark-mode .overlay-container-inner a#supervisor-container p {
 }
 
 #portfolio-cards-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
 }
 
 .portfolio-card {
     border: 1px solid var(--card-border-color);
     border-radius: 50px;
-    flex-basis: 30%;
 }
 
 .portfolio-card:hover {
@@ -1056,6 +1055,7 @@ body.dark-mode .portfolio-content-inner .link-btn#github-btn .btn-content .conte
 
 #contact-card-form-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
@@ -1063,7 +1063,7 @@ body.dark-mode .portfolio-content-inner .link-btn#github-btn .btn-content .conte
 }
 
 .contact-card {
-    flex-basis: 30%;
+    flex-basis: 33%;
 }
 
 .contact-card:hover {
@@ -1091,10 +1091,9 @@ body.dark-mode .contact-card .contact-card-header {
 }
 
 .contact-card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     min-height: 425px;
 }
 
@@ -1102,10 +1101,6 @@ body.dark-mode .contact-card .contact-card-header {
     width: 85%;
     display: flex;
     align-items: center;
-}
-
-.contact-section:not(:last-child) {
-    margin-bottom: 50px;
 }
 
 .contact-section .contact-img {
@@ -1171,12 +1166,14 @@ body.dark-mode #dark-mode-container button img {
 /* Form style START */
 
 #site-contact-form {
+    width: 60%;
     min-height: 600px;
-    flex-basis: 60%;
+    min-width: 737px;
 }
 
 #name-email-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
@@ -1190,6 +1187,7 @@ body.dark-mode #dark-mode-container button img {
 
 .form-field-container.upper-form-container {
     flex-basis: 47.5%;
+    min-width: 350px;
 }
 
 .form-field-container label {
@@ -1412,6 +1410,10 @@ body.dark-mode #site-footer {
     .site-header-container h1.site-header {
         padding-right: 30px;
     }
+
+    #footer-contents ul {
+        width: 125px;
+    }
 }
 
 @media screen and (min-width: 577px) and (max-width: 1288px) {
@@ -1461,6 +1463,19 @@ body.dark-mode #site-footer {
 
     .site-header-container#alt-work-exp-header {
         display: flex;
+    }
+
+    .contact-card-content {
+        grid-template-columns: 1fr;
+        min-height: 450px;
+    }
+
+    .form-field-container.upper-form-container {
+        flex-basis: 100%;
+    }
+
+    #name-container {
+        margin-bottom: 40px;
     }
 }
 
@@ -1517,13 +1532,19 @@ body.dark-mode #site-footer {
         display: block;
     }
 
+    #portfolio-cards-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .portfolio-card {
+        width: 100%;
+        max-width: 600px;
+    }
+
     /* #mobile-nav-container {
         display: flex;
     } */
-}
-
-@media screen and (max-width: 1206px) {
-    
 }
 
 @media screen and (max-width: 1288px) {
@@ -1572,6 +1593,29 @@ body.dark-mode #site-footer {
     #portfolio-content {
         height: calc(100vh - ( var(--site-menu-height) + 50px) );
         max-height: 550px;
+    }
+}
+
+@media screen and (min-width: 778px) and (max-width: 1222px) {
+    .contact-card-content {
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 300px;
+    }
+}
+
+@media screen and (max-width: 1222px) {
+    #contact-card-form-container {
+        justify-content: center;
+    }
+
+    .contact-card {
+        flex-basis: 100%;
+    }
+
+    #site-contact-form {
+        margin-top: 60px;
+        width: 100%;
+        min-width: unset;
     }
 }
 
