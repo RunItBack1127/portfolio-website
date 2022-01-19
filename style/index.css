@@ -275,20 +275,20 @@ body.dark-mode #navigation-links ul li span#link--contact {
 	cursor: pointer;
 }
 
-#mobile-hamburger-container {
+.mobile-hamburger-container {
     display: none;
     width: 40px;
     height: 21px;
 }
 
-#mobile-hamburger-container #mobile-menu-cta {
+.mobile-hamburger-container .mobile-menu-cta {
     background: transparent;
     border: none;
     width: 100%;
     height: 100%;
 }
 
-#mobile-menu-cta svg rect {
+.mobile-menu-cta svg rect {
     fill: var(--mobile-hamburger-path-fill);
 }
 
@@ -1439,6 +1439,10 @@ body.dark-mode #site-footer {
     #skills-container {
         margin-top: 50px;
     }
+
+    #site-navigation-menu-scroll #scroll-socials-container {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 797px) {
@@ -1486,7 +1490,7 @@ body.dark-mode #site-footer {
         display: none;
     }
 
-    #site-navigation-menu #mobile-hamburger-container {
+    .mobile-hamburger-container {
         display: block;
     }
 
