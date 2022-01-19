@@ -499,6 +499,10 @@ body.dark-mode #keyboard-container svg g g g line {
     width: 100%;
 }
 
+.site-header-container#alt-work-exp-header {
+    display: none;
+}
+
 .site-header-container h1.site-header {
     font-size: 3.5rem;
     line-height: 3.5rem;
@@ -668,6 +672,7 @@ body.dark-mode .skills-gauge-container span.progress-span {
 
 #employment-card-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
@@ -678,7 +683,8 @@ body.dark-mode .skills-gauge-container span.progress-span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: 47.5%;
+    width: 47.5%;
+    min-width: 580px;
 }
 
 .employment-card:hover {
@@ -1390,6 +1396,11 @@ body.dark-mode #site-footer {
         text-align: center;
     }
 
+    .overlay-text-container {
+        width: 100%;
+        text-align: center;
+    }
+
     .site-content-container h1.section-header span {
         padding: 0 20px;
     }
@@ -1442,6 +1453,14 @@ body.dark-mode #site-footer {
 
     #site-navigation-menu-scroll #scroll-socials-container {
         display: none;
+    }
+
+    .site-header-container#default-work-exp-header {
+        display: none;
+    }
+
+    .site-header-container#alt-work-exp-header {
+        display: flex;
     }
 }
 
@@ -1516,6 +1535,10 @@ body.dark-mode #site-footer {
         justify-content: center;
     }
 
+    #employment-card-container {
+        justify-content: center;
+    }
+
     .intro-card {
         min-width: unset;
     }
@@ -1527,6 +1550,19 @@ body.dark-mode #site-footer {
 
     .intro-card:last-child {
         margin-top: 100px;
+    }
+
+    .employment-card {
+        min-width: 100%;
+    }
+
+    .employment-card .employer-info-container {
+        width: 80%;
+        max-width: 700px;
+    }
+
+    .employment-card:not(:first-child) {
+        margin-top: 75px;
     }
 }
 
