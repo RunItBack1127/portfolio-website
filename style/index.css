@@ -351,7 +351,7 @@ body.dark-mode #navigation-links ul li span#link--contact {
 #intro-ctas-container button {
     border: 1px solid var(--site-border-color);
     border-radius: 50px;
-    font-size: 2rem;
+    font-size: 0.8em;
     text-transform: uppercase;
     flex-basis: 320px;
     padding: 1.25rem 0;
@@ -448,6 +448,7 @@ body.dark-mode #keyboard-container svg g g g line {
 
 #intro-cards-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
@@ -468,7 +469,7 @@ body.dark-mode #keyboard-container svg g g g line {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: 47.5%;
+    flex-basis: 575px;
     min-height: 660px;
 }
 
@@ -538,15 +539,20 @@ body.dark-mode #keyboard-container svg g g g line {
     margin-bottom: 25px;
 }
 
+#campus-description-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 1.5rem;
+}
+
 #campus-description-container img {
     width: 250px;
     margin-right: 25px;
 }
 
-#campus-description-container {
-    display: flex;
-    align-items: flex-start;
-    font-size: 1.5rem;
+#education-description-container {
+    flex-basis: 240px;
 }
 
 .top-intro-container {
@@ -1364,11 +1370,36 @@ body.dark-mode #site-footer {
     #intro-name-container h1 {
         font-size: 2.75em;
     }
+
+    .intro-card {
+        flex-basis: 100%;
+    }
+
+    #education-container .subsection-header {
+        text-align: center;
+    }
+
+    .site-content-container h1.section-header span {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1206px) {
+    .intro-card {
+        flex-basis: 90%;
+    }
 }
 
 @media screen and (min-width: 577px) and (max-width: 800px) {
     #portfolio-content {
         font-size: 2.25rem;
+    }
+}
+
+@media screen and (max-width: 797px) {
+    #education-description-container {
+        flex-basis: 100%;
+        text-align: center;
     }
 }
 
@@ -1399,6 +1430,34 @@ body.dark-mode #site-footer {
     /* #mobile-nav-container {
         display: flex;
     } */
+}
+
+@media screen and (max-width: 1206px) {
+    #campus-description-container {
+        justify-content: center;
+    }
+
+    #education-description-container {
+        margin-top: 25px;
+    }
+
+    .lower-intro-container#intro-container {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1277px) {
+    #intro-cards-container {
+        justify-content: center;
+    }
+
+    .intro-card .intro-card-inner {
+        width: 80%;
+    }
+
+    .intro-card:last-child {
+        margin-top: 100px;
+    }
 }
 
 /* Initial media query for refactoring on desktop */
