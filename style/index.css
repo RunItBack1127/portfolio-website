@@ -307,7 +307,7 @@ body.dark-mode #navigation-links ul li span#link--contact {
     width: 80%;
     max-width: 750px;
     font-size: 2.5rem;
-    height: calc(100vh - ( var(--site-menu-height) + 50px) );
+    height: 600px;
 }
 
 #intro-name-container {
@@ -1509,6 +1509,10 @@ body.dark-mode #site-footer {
         display: none;
     }
 
+    #site-navigation-menu-scroll #scroll-nav-inner {
+        width: 92.5%;
+    }
+
     .mobile-hamburger-container {
         display: block;
     }
@@ -1563,6 +1567,17 @@ body.dark-mode #site-footer {
 
     .employment-card:not(:first-child) {
         margin-top: 75px;
+    }
+
+    #portfolio-content {
+        height: calc(100vh - ( var(--site-menu-height) + 50px) );
+        max-height: 550px;
+    }
+}
+
+@media screen and (min-width: 1289px) and (max-width: 1919px) {
+    #portfolio-content {
+        height: 500px;
     }
 }
 
