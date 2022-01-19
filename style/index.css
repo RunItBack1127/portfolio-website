@@ -469,7 +469,8 @@ body.dark-mode #keyboard-container svg g g g line {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: 575px;
+    width: 47.5%;
+    min-width: 575px;
     min-height: 660px;
 }
 
@@ -552,7 +553,7 @@ body.dark-mode #keyboard-container svg g g g line {
 }
 
 #education-description-container {
-    flex-basis: 240px;
+    width: calc(100% - 280px);
 }
 
 .top-intro-container {
@@ -573,12 +574,18 @@ body.dark-mode #keyboard-container svg g g g line {
 
 #dev-exp-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 #web-dev-exp-container {
-    flex-basis: 45%;
+    width: 45%;
+    min-width: 230px;
+}
+
+#dev-exp-container article {
+    width: 45%;
 }
 
 .exp-container {
@@ -629,10 +636,6 @@ body.dark-mode .exp-gauge-container .exp-gauge-content svg.skill-met circle {
     fill: #fff;
 }
 
-#software-dev-exp-container {
-    flex-basis: 45%;
-}
-
 .skills-gauge-container {
     display: flex;
     justify-content: space-between;
@@ -643,7 +646,8 @@ body.dark-mode .exp-gauge-container .exp-gauge-content svg.skill-met circle {
 
 .skills-gauge-container p {
     font-size: 1.25rem;
-    flex-basis: 50%;
+    width: 50%;
+    min-width: 150px;
 }
 
 .skills-gauge-container span.progress-span {
@@ -1375,24 +1379,54 @@ body.dark-mode #site-footer {
         flex-basis: 100%;
     }
 
-    #education-container .subsection-header {
+    h1.subsection-header {
         text-align: center;
     }
 
     .site-content-container h1.section-header span {
         padding: 0 20px;
     }
+
+    #dev-exp-container {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 577px) and (max-width: 1206px) {
     .intro-card {
         flex-basis: 90%;
+        min-width: unset;
     }
 }
 
 @media screen and (min-width: 577px) and (max-width: 800px) {
     #portfolio-content {
         font-size: 2.25rem;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 777px) {
+    #dev-exp-container {
+        width: 75%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 777px) {
+    #dev-exp-container {
+        justify-content: center;
+    }
+
+    #dev-exp-container article {
+        width: 100%;
+    }
+
+    #dev-exp-container article:last-child {
+        margin-top: 50px;
+    }
+
+    #skills-container {
+        margin-top: 50px;
     }
 }
 
@@ -1451,8 +1485,13 @@ body.dark-mode #site-footer {
         justify-content: center;
     }
 
+    .intro-card {
+        min-width: unset;
+    }
+
     .intro-card .intro-card-inner {
         width: 80%;
+        max-width: 700px;
     }
 
     .intro-card:last-child {
