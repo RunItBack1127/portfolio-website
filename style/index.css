@@ -1363,6 +1363,23 @@ body.dark-mode #site-footer {
     filter: invert(1);
 }
 
+#responsive-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 2000;
+}
+
+#site-responsive-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3000;
+}
+
 @font-face {
     src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/main/assets/fonts/Radian/Radian.ttf");
     font-family: "Radian";
