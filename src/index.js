@@ -7,6 +7,14 @@ darkModeBtn.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
 });
 
+// Responsive menu click listener
+const responsiveMenus = document.querySelectorAll(".mobile-menu-cta");
+for(const responsiveMenu of responsiveMenus) {
+    responsiveMenu.addEventListener("click", () => {
+        document.querySelector("body").classList.toggle("show-responsive-menu");
+    });
+}
+
 // Home tab click listener
 const homeTabs = document.querySelectorAll(".home-tab");
 for(const homeTab of homeTabs) {

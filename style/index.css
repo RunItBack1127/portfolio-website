@@ -9,6 +9,8 @@
     font-size: 16px;
 
     --site-menu-height: 100px;
+    --responsive-menu-header-height: 175px;
+    --responsive-menu-socials-height: 100px;
 
     /* Primary colors */
     --primary-color-1: #000;
@@ -31,6 +33,9 @@
     --card-border-color: #000;
     --site-form-loading-screen-background-color: rgba(255, 255, 255, 0.75);
     --mobile-hamburger-path-fill: #000;
+    --responsive-mobile-hamburger-path-fill: #fff;
+    --responsive-menu-header-background: #000;
+    --responsive-menu-content-background: #fff;
 }
 
 body {
@@ -52,6 +57,11 @@ body.dark-mode {
     --card-border-color: #fff;
     --site-form-loading-screen-background-color: rgba(0, 0, 0, 0.75);
     --mobile-hamburger-path-fill: #fff;
+    --responsive-menu-content-background: #000;
+}
+
+body.show-responsive-menu {
+    overflow-y: hidden;
 }
 
 ul {
@@ -282,9 +292,18 @@ body.dark-mode #navigation-links ul li span#link--contact {
 }
 
 .mobile-hamburger-container {
-    display: none;
     width: 40px;
     height: 21px;
+}
+
+.mobile-hamburger-container:not(.responsive-hamburger) {
+    display: none;
+}
+
+.responsive-hamburger.mobile-hamburger-container {
+    position: fixed;
+    top: 20px;
+    right: 10px;
 }
 
 .mobile-hamburger-container .mobile-menu-cta {
@@ -296,6 +315,10 @@ body.dark-mode #navigation-links ul li span#link--contact {
 
 .mobile-menu-cta svg rect {
     fill: var(--mobile-hamburger-path-fill);
+}
+
+.responsive-hamburger .mobile-menu-cta svg rect {
+    fill: var(--responsive-mobile-hamburger-path-fill);
 }
 
 #portfolio-intro-content {
@@ -1364,6 +1387,7 @@ body.dark-mode #site-footer {
 }
 
 #responsive-menu-overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -1373,11 +1397,97 @@ body.dark-mode #site-footer {
     z-index: 2000;
 }
 
+body.show-responsive-menu #responsive-menu-overlay {
+    display: block;
+}
+
 #site-responsive-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 3000;
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    border: 1px solid #000;
+    transform: translateX(100%);
+}
+
+body.show-responsive-menu #site-responsive-menu {
+    transform: translateX(0);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 50px;
+}
+
+#site-responsive-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--responsive-menu-header-background);
+    height: var(--responsive-menu-header-height);
+}
+
+body.dark-mode #site-responsive-header {
+    border-bottom: 1px solid #fff;
+}
+
+#site-responsive-header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--primary-color-2);
+}
+
+#site-responsive-content {
+    background-color: var(--responsive-menu-content-background);
+    height: calc(100% - var(--responsive-menu-header-height));
+}
+
+#site-responsive-content nav#responsive-nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - var(--responsive-menu-socials-height));
+}
+
+#site-responsive-content nav#responsive-nav-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+#site-responsive-content nav#responsive-nav-links ul li span,
+#site-responsive-content nav#responsive-nav-links ul li a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    color: var(--site-content-color);
+    cursor: pointer;
+}
+
+#responsive-social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--responsive-menu-socials-height);
+}
+
+#responsive-social-links ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+}
+
+#responsive-social-links ul li span svg,
+#responsive-social-links ul li a svg {
+    width: 30px;
+    height: 30px;
 }
 
 @font-face {
@@ -1555,7 +1665,7 @@ body.dark-mode #site-footer {
         width: 92.5%;
     }
 
-    .mobile-hamburger-container {
+    .mobile-hamburger-container:not(.responsive-hamburger) {
         display: block;
     }
 
