@@ -470,7 +470,7 @@ body.dark-mode #keyboard-container svg g g g line {
     justify-content: center;
     align-items: center;
     width: 47.5%;
-    min-width: 575px;
+    min-width: 580px;
     min-height: 660px;
 }
 
@@ -977,8 +977,15 @@ body.dark-mode .portfolio-content-inner .link-btn#github-btn .btn-content .conte
     width: 25px;
 }
 
+#skill-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: calc(30% + 20px);
+    gap: 75px 20px;
+}
+
 /* Skill cards container START */
-.skill-card-row {
+/* .skill-card-row {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -994,9 +1001,9 @@ body.dark-mode .portfolio-content-inner .link-btn#github-btn .btn-content .conte
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: calc(30% + 20px);
+    width: calc(30% + 20px);
     min-height: 250px;
-}
+} */
 
 .skill-card:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 20px;
@@ -1390,9 +1397,13 @@ body.dark-mode #site-footer {
     #dev-exp-container {
         width: 100%;
     }
+
+    .site-header-container h1.site-header {
+        padding-right: 30px;
+    }
 }
 
-@media screen and (min-width: 577px) and (max-width: 1206px) {
+@media screen and (min-width: 577px) and (max-width: 1288px) {
     .intro-card {
         flex-basis: 90%;
         min-width: unset;
@@ -1435,6 +1446,20 @@ body.dark-mode #site-footer {
         flex-basis: 100%;
         text-align: center;
     }
+
+    .lower-intro-container#intro-container {
+        margin-top: 50px;
+    }
+
+    #skill-cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 798px) and (max-width: 1288px) {
+    #skill-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -1457,6 +1482,10 @@ body.dark-mode #site-footer {
         display: none;
     }
 
+    #site-navigation-menu-scroll #scroll-navigation-links {
+        display: none;
+    }
+
     #site-navigation-menu #mobile-hamburger-container {
         display: block;
     }
@@ -1467,6 +1496,10 @@ body.dark-mode #site-footer {
 }
 
 @media screen and (max-width: 1206px) {
+    
+}
+
+@media screen and (max-width: 1288px) {
     #campus-description-container {
         justify-content: center;
     }
@@ -1475,12 +1508,6 @@ body.dark-mode #site-footer {
         margin-top: 25px;
     }
 
-    .lower-intro-container#intro-container {
-        margin-top: 50px;
-    }
-}
-
-@media screen and (max-width: 1277px) {
     #intro-cards-container {
         justify-content: center;
     }
