@@ -231,8 +231,14 @@ body.dark-mode #navigation-links ul li span#link--contact {
 #scroll-nav-inner h1 {
     font-family: var(--site-font-2);
     font-size: 2.5rem;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
+    margin-right: 0.25em;
+}
+
+#scroll-nav-inner h1 br#scroll-name-break {
+    display: none;
 }
 
 #scroll-nav-inner nav#scroll-socials-container {
@@ -1384,6 +1390,10 @@ body.dark-mode #site-footer {
 
     #intro-name-container h1 {
         font-size: 2.75em;
+    }
+
+    #scroll-nav-inner h1 br#scroll-name-break {
+        display: block;
     }
 
     .intro-card {
