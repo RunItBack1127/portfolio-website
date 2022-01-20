@@ -1,7 +1,6 @@
 const KEYBOARD_ANIMATION_INTERVAL = 100;
 
 const keys = document.querySelectorAll("#keyboard-graphic-container #keyboard-container svg g g path:not(#keyboard-panel)");
-console.log(keys.length);
 
 function randomizeKeyboard() {
     const litKey = document.querySelector(".lit-key");
