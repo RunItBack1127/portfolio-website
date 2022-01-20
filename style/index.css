@@ -382,7 +382,8 @@ body.dark-mode #navigation-links ul li span#link--contact {
     border-radius: 50px;
     font-size: 0.8em;
     text-transform: uppercase;
-    flex-basis: 320px;
+    min-width: 320px;
+    width: 47.5%;
     padding: 1.25rem 0;
     text-align: center;
 }
