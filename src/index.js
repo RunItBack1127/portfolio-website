@@ -20,6 +20,7 @@ const homeTabs = document.querySelectorAll(".home-tab");
 for(const homeTab of homeTabs) {
     homeTab.addEventListener("click", () => {
         $('body').scrollTo('#portfolio-intro-content', SCROLL_DURATION);
+        document.querySelector("body").classList.remove("show-responsive-menu");
     });
 }
 
@@ -36,6 +37,7 @@ for(const skillNav of skillNavSpans) {
                 top: -50
             }
         });
+        document.querySelector("body").classList.remove("show-responsive-menu");
     });
 }
 
@@ -46,6 +48,7 @@ for(const portNav of portfolioNavSpans) {
                 top: -50
             }
         });
+        document.querySelector("body").classList.remove("show-responsive-menu");
     });
 }
 
@@ -56,5 +59,6 @@ for(const contactNav of contactNavSpans) {
                 top: -50
             }
         });
+        document.querySelector("body").classList.remove("show-responsive-menu");
     });
 }
