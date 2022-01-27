@@ -21,4 +21,4 @@ window.addEventListener("scroll", () => {
             scc.classList.add("show-content");
         }
     }
-})
+});
