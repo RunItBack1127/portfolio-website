@@ -143,6 +143,11 @@ span {
     width: 100%;
 }
 
+#socials-container ul li a,
+#socials-container ul li svg {
+    cursor: pointer;
+}
+
 #socials-container ul:hover li a svg:not(:hover),
 #socials-container ul:hover li span svg:not(:hover) {
     opacity: 0.25;
