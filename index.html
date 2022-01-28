@@ -16,6 +16,23 @@
 </head>
 <body>
     <div id="responsive-menu-overlay"></div>
+    <div id="contact-form-submit-container">
+        <article id="contact-form-submit-success">
+            <section id="close-container">
+                <button>
+                    <img src="assets/close-icon.png">
+                </button>
+            </section>
+            <header id="submit-success-header">
+                <h1>Form submission sent!</h1>
+                <img src="assets/check-icon.png">
+            </header>
+            <section id="submit-success-message">
+                <span>Your message has been sent and received. I will definitely be back in touch with you soon!</span>
+            </section>
+        </article>
+        <span id="loading-spinner"></span>
+    </div>
     <aside id="site-responsive-menu">
         <!-- <header id="site-responsive-header">
             <h1>Weston<br>Greene</h1>
@@ -1145,6 +1162,7 @@
                         <div class="form-field-container form-required upper-form-container" id="email-container">
                             <label for="_replyto">Email</label>
                             <input required type="text" name="_replyto" id="email-field">
+                            <span>Please enter a valid email address.</span>
                         </div>
                     </div>
                     <div class="form-field-container form-required" id="subject-container">
