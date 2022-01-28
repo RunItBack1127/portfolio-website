@@ -1306,6 +1306,11 @@ body.dark-mode #dark-mode-container button img {
     margin-right: 25px;
 }
 
+#send-clear-container button.option-disable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 body.dark-mode #send-clear-container #clear-btn {
     color: #fff;
 }
