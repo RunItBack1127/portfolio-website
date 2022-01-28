@@ -4,6 +4,8 @@ const FORM_SUCCESS_RESPONSE = 200;
 const EMAIL_PROCESSING_ERR_RESPONSE = 422;
 
 const clearBtn = document.querySelector("#site-contact-form #send-clear-container #clear-btn");
+const sendBtn = document.querySelector("#site-contact-form #send-clear-container #send-btn");
+
 clearBtn.addEventListener("click", (event) => {
     event.preventDefault();
     clearFormInputs();
@@ -53,6 +55,7 @@ function clearFormInputs() {
         formInput.classList.remove("has-content");
     }
     clearBtn.classList.add("option-disable");
+    sendBtn.classList.add("option-disable");
 }
 
 function RETRIEVE_FORM_DATA() {
@@ -65,7 +68,6 @@ function RETRIEVE_FORM_DATA() {
     return JSON.stringify(formData);
 }
 
-const sendBtn = document.querySelector("#site-contact-form #send-clear-container #send-btn");
 sendBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
