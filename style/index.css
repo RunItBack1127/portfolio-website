@@ -38,6 +38,9 @@
     --responsive-overlay-color: rgba(255, 255, 255, 0.85);
     --responsive-menu-header-background: #000;
     --responsive-menu-content-background: #fff;
+    --invalid-email-message-color: rgba(255, 0, 0, 0.75);
+    --form-submit-background-color: rgba(255, 255, 255, 0.5);
+    --form-submit-success-background-color: #fff;
 }
 
 body {
@@ -61,6 +64,9 @@ body.dark-mode {
     --responsive-overlay-color: rgba(0, 0, 0, 0.85);
     --responsive-menu-content-background: #000;
     --responsive-mobile-hamburger-path-fill: #fff;
+    --invalid-email-message-color: rgba(0, 255, 0, 0.75);
+    --form-submit-background-color: rgba(0, 0, 0, 0.5);
+    --form-submit-success-background-color: #111;
 }
 
 body.show-responsive-menu {
@@ -1269,6 +1275,18 @@ body.dark-mode #dark-mode-container button img {
     opacity: 1.0;
 }
 
+#email-container span {
+    position: absolute;
+    margin-top: 135px;
+    display: none;
+    font-size: 1rem;
+    color: var(--invalid-email-message-color);
+}
+
+#site-contact-form.invalid-email #email-container span {
+    display: block;
+}
+
 #subject-container {
     margin-bottom: 40px;
 }
@@ -1304,6 +1322,11 @@ body.dark-mode #dark-mode-container button img {
     background-color: transparent;
     color: #000;
     margin-right: 25px;
+}
+
+#send-clear-container button.option-disable {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 body.dark-mode #send-clear-container #clear-btn {
@@ -1485,6 +1508,113 @@ body.dark-mode #site-responsive-header {
     height: 30px;
 }
 
+#contact-form-submit-container {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4000;
+    background-color: var(--form-submit-background-color);
+}
+
+body.show-form-submit-container #contact-form-submit-container {
+    display: flex;
+}
+
+#contact-form-submit-success {
+    display: none;
+    width: 90%;
+    max-width: 900px;
+    min-height: 275px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background-color: var(--form-submit-success-background-color);
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 50px;
+}
+
+body.show-form-submit-container #contact-form-submit-container:not(.show-loading-spinner) #contact-form-submit-success {
+    display: block;
+}
+
+#contact-form-submit-success #close-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 50px 50px 0 0;
+    background: none;
+    height: 75px;
+    width: 95%;
+}
+
+#close-container button {
+    border: none;
+    background: none;
+}
+
+#close-container button img {
+    height: 20px;
+    width: 20px;
+}
+
+body.dark-mode #close-container button img {
+    filter: invert(1);
+}
+
+#submit-success-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#submit-success-header h1 {
+    font-size: 3rem;
+    margin-right: 50px;
+}
+
+#submit-success-header img {
+    width: 45px;
+    height: auto;
+}
+
+#contact-form-submit-success #submit-success-message {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit-success-message span {
+    font-size: 1.5rem;
+    width: 65%;
+    text-align: center;
+}
+
+#loading-spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #f00;
+    border-radius: 50%;
+    animation: spin 0.5s ease-in-out infinite;
+}
+
+#contact-form-submit-container.show-loading-spinner #loading-spinner {
+    display: block;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @font-face {
     src: url("https://raw.githubusercontent.com/RunItBack1127/portfolio-website/main/assets/fonts/Radian/Radian.ttf");
     font-family: "Radian";
@@ -1546,6 +1676,10 @@ body.dark-mode #site-responsive-header {
     #footer-contents ul {
         width: 125px;
     }
+
+    #submit-success-message span {
+        width: 90%;
+    }
 }
 
 @media screen and (min-width: 577px) and (max-width: 1288px) {
@@ -1565,6 +1699,12 @@ body.dark-mode #site-responsive-header {
     #dev-exp-container {
         width: 75%;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #submit-success-header h1 {
+        display: none;
     }
 }
 
@@ -1778,5 +1918,9 @@ body.dark-mode #site-responsive-header {
 
     .site-content-container h1 span {
         padding: 0 50px;
+    }
+
+    #email-container span {
+        margin-top: 125px;
     }
 }
